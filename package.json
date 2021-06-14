@@ -1,0 +1,22 @@
+{
+  "name": "family-website",
+  "version": "1.0.0",
+  "description": "This is a simple website where family members can interact and share information.",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass --watch scss:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohitmendus/family-website.git"
+  },
+  "author": "Rohit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rohitmendus/family-website/issues"
+  },
+  "homepage": "https://github.com/rohitmendus/family-website#readme",
+  "devDependencies": {
+    "sass": "^1.34.1"
+  }
+}

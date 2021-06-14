@@ -1,0 +1,52 @@
+@use "_variables_mixins";
+
+@media (max-width: 992px) {
+	.navbar-dark {
+		.navbar-collapse {
+			.navbar-nav {
+				margin-right: 10px;
+				.nav-item {
+					font-size: 1.2em;
+				}
+				.dropdown {
+					margin-left: 10px;
+				}
+			}
+		}
+		.navbar-brand {
+			margin-left: 25px;
+			span {
+				font-size: 1.3em;
+			}
+			.logo-img {
+				width: 40px;
+				height: 40px;
+			}
+		}
+	}
+}
+
+
+@media (max-width: 767px) {
+	.navbar-brand {
+		margin-left: 10px;
+		span {
+			font-size: 1.15em;
+		}
+		.logo-img {
+			width: 35px;
+			height: 35px;
+		}
+	}
+	.navbar-collapse {
+		margin-top: 10px;
+		margin-left: 25px;
+		.navbar-nav {
+			margin: 0;
+			display: block;
+		}
+	}
+}
+
+
+

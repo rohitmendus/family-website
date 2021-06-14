@@ -1,0 +1,30 @@
+@use "variables_mixins";
+
+// START OF NAVABAR
+.navbar-brand {
+	margin-left: 50px;
+	span{
+		font-size: 1.5em;
+	}
+}
+
+
+.navbar-dark {
+	.navbar-nav {
+		display: flex;
+		align-items: center;
+		margin-right: 20px;
+		.nav-item {
+			font-size: 1.25em;
+			.nav-link{
+				color: white;
+				&:hover {
+					color: rgba(255, 255, 255, 0.8);
+				}
+			}
+		}
+		.dropdown {
+			margin-left: 30px;
+		}
+	}
+}
