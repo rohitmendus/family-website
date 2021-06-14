@@ -24,7 +24,11 @@
 			}
 		}
 		.dropdown {
-			margin-left: 30px;
+			margin-left: 10px;
+			.profile-img {
+				border-radius: 50%;
+			}
 		}
 	}
 }
+

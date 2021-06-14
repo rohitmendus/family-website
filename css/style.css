@@ -10751,7 +10751,10 @@ textarea.form-control-lg {
   color: rgba(255, 255, 255, 0.8);
 }
 .navbar-dark .navbar-nav .dropdown {
-  margin-left: 30px;
+  margin-left: 10px;
+}
+.navbar-dark .navbar-nav .dropdown .profile-img {
+  border-radius: 50%;
 }
 
 @media (max-width: 992px) {
@@ -10760,9 +10763,6 @@ textarea.form-control-lg {
   }
   .navbar-dark .navbar-collapse .navbar-nav .nav-item {
     font-size: 1.2em;
-  }
-  .navbar-dark .navbar-collapse .navbar-nav .dropdown {
-    margin-left: 10px;
   }
   .navbar-dark .navbar-brand {
     margin-left: 25px;
