@@ -10757,6 +10757,67 @@ textarea.form-control-lg {
   border-radius: 50%;
 }
 
+body .back {
+  color: white;
+  display: block;
+  text-decoration: none;
+  margin: 10px 0px 0px 20px;
+  cursor: pointer;
+}
+body .back:hover {
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 300ms ease-in 300ms;
+}
+body .back span {
+  margin-left: 10px;
+  font-size: 2em;
+  vertical-align: middle;
+  cursor: pointer;
+}
+body .card-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 15px;
+}
+body .card-container .card {
+  width: 400px;
+  height: 500px;
+}
+body .card-container .card .card-body .nav-tabs {
+  border-bottom: none;
+}
+body .card-container .card .card-body .nav-tabs .nav-item {
+  padding: 0;
+}
+body .card-container .card .card-body .nav-tabs .nav-item .nav-link {
+  width: 100%;
+  border-color: #fff;
+}
+body .card-container .card .card-body .nav-tabs .nav-item .active {
+  border-color: #fff #fff #0099ff;
+  border-width: 2px;
+}
+body .card-container .card .card-body .nav-tabs .nav-item .active:hover {
+  border-color: #fff #fff #0099ff;
+}
+body .card-container .card .card-body .tab-content #sign-in .sign-in-body {
+  margin: 10px;
+  margin-top: 30px;
+}
+body .card-container .card .card-body .tab-content #sign-in .sign-in-body #g-signin {
+  margin-bottom: 20px;
+}
+body .card-container .card .card-body .tab-content #sign-in .sign-in-body button[type=submit] {
+  margin-left: auto;
+  margin-right: auto;
+  width: 320px;
+  color: white;
+  padding: 7px 15px;
+  font-size: 1.25em;
+}
+
 @media (max-width: 992px) {
   .navbar-dark .navbar-collapse .navbar-nav {
     margin-right: 10px;
@@ -10794,6 +10855,14 @@ textarea.form-control-lg {
   .navbar-collapse .navbar-nav {
     margin: 0;
     display: block;
+  }
+
+  .back {
+    font-size: 0.8em;
+  }
+  .back svg {
+    width: 30px;
+    height: 30px;
   }
 }
 

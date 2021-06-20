@@ -5,9 +5,68 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="google-signin-client_id" content="meta-plateau-317410.apps.googleusercontent.com">
 	<title>Sign In|Register</title>
 </head>
 <body class="bg-primary">
+	<a class="back" href="index.html">
+		<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+			<path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+		</svg>
+		<span>Back</span>
+	</a>
+	<div class="container card-container">
+		<div class="card container">
+			<div class="card-body">
+				<ul class="nav nav-tabs row" id="myTab" role="tablist">
+					<li class="nav-item col-6" role="presentation">
+						<button class="nav-link active" id="sign-in-tab" data-bs-toggle="tab" data-bs-target="#sign-in" type="button" role="tab" aria-controls="sign-in" aria-selected="true">Sign In</button>
+					</li>
+					<li class="nav-item col-6" role="presentation">
+						<button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button" role="tab" aria-controls="register" aria-selected="false">Register</button>
+					</li>
+				</ul>
+				<div class="tab-content" id="myTabContent">
+					<div class="tab-pane fade show active" id="sign-in" role="tabpanel" aria-labelledby="sign-in-tab">
+						<div class="sign-in-body">
+							<form class="needs-validation" novalidate>
+								<div class="mb-3">
+									<div class="form-floating mb-3">
+										<input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+										<label for="floatingInput">Email address</label>
+										<div class="valid-feedback">
+											Looks good!
+										</div>
+										<div class="invalid-feedback">
+											Please provide a valid email!
+										</div>
+									</div>
+									<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+								</div>
+								<div class="mb-3">
+									<div class="form-floating">
+										<input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+										<label for="floatingPassword">Password</label>
+										<div class="valid-feedback">
+											Looks good!
+										</div>
+										<div class="invalid-feedback">
+											Please provide a valid password!
+										</div>
+									</div>
+								</div>
+								<div class="d-flex justify-content-center" id="g-signin"><div id="my-signin2"></div></div>
+								<button type="submit" class="btn btn-primary">Submit</button>
+							</form>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">...</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Google sign in -->
+	<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 	<!--Bootstrap Bundle with Popper -->
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<!-- My script -->
