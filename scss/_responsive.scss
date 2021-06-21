@@ -43,11 +43,21 @@
 			display: block;
 		}
 	}
-	.back {
-		font-size: 0.8em;
-		svg {
-			width: 30px;
-			height: 30px;
+	#sign-in-page {
+		.back {
+			font-size: 0.8em;
+			svg {
+				width: 30px;
+				height: 30px;
+			}
+		}
+		#sign-in-or-register {
+			.card {
+				position: static;
+				top: 0%;
+				left: 0%;
+				transform: translate(0%, 0%);
+			}
 		}
 	}
 }

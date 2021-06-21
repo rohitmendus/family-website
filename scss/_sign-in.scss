@@ -1,6 +1,6 @@
 @use "variables_mixins" as *;
 
-body {
+#sign-in-page {
 	.back {
 		color: white;
 		display: block;
@@ -19,15 +19,15 @@ body {
 		}
 	}
 
-	.card-container {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		margin-top: 15px;
+	#sign-in-or-register {
 		.card{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
 			width: 400px;
-			height: 500px;
+			min-height: 400px;
+			margin-top: 50px;
 			.card-body {
 				.nav-tabs {
 					border-bottom: none;
@@ -47,20 +47,24 @@ body {
 					}
 				}
 				.tab-content {
-					#sign-in {
-						.sign-in-body {
-							margin: 10px;
-							margin-top: 30px;
-							#g-signin {
-								margin-bottom: 20px;
-							}
-							button[type="submit"] {
-								margin-left: auto;
-								margin-right: auto;
-								width: 320px;
-								color: white;
-								padding: 7px 15px;
-								font-size: 1.25em;
+					.sign-in-body {
+						margin: 10px;
+						margin-top: 30px;
+						#g-signin {
+							margin-bottom: 20px;
+						}
+						button[type="submit"] {
+							margin-left: auto;
+							margin-right: auto;
+							width: 320px;
+							color: white;
+							padding: 7px 15px;
+							font-size: 1.25em;
+						}
+						.name-sign-in {
+							display: inline-block;
+							input[type="text"] {
+								max-width: 158px;
 							}
 						}
 					}
