@@ -27,11 +27,13 @@
 			transform: translate(-50%, -50%);
 			width: 400px;
 			min-height: 400px;
-			margin-top: 50px;
+			margin-top: 30px;
 			.card-body {
 				.nav-tabs {
 					border-bottom: none;
 					.nav-item {
+						font-size: 20px;
+						text-align: center;
 						padding: 0;
 						.nav-link {
 							width: 100%;

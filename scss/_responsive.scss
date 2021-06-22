@@ -53,10 +53,81 @@
 		}
 		#sign-in-or-register {
 			.card {
-				position: static;
-				top: 0%;
-				left: 0%;
-				transform: translate(0%, 0%);
+				width: 380px;
+				height: 500px;
+				overflow-y: scroll;
+				.card-body {
+					margin: 0 auto;
+					width: 320px;
+					font-size: 0.8em;
+					.nav {
+						.nav-item {
+							font-size: 18px;
+						}
+					}
+					.tab-content {
+						#g-signin {
+							* {
+								font-size: 0.9em;
+							}
+							#my-signin2 {
+								.abcRioButton {
+									width: 270px !important;
+								}
+							}
+						}
+						.sign-in-body {
+							button[type="submit"] {
+								width: 270px;
+							}
+							.name-sign-in {
+								display: block;
+								input[type="text"] {
+									max-width: 100%;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// For mobile users
+@media (max-width: 412px) {
+	#sign-in-page {
+		.back {
+			font-size: 0.8em;
+			svg {
+				width: 30px;
+				height: 30px;
+			}
+		}
+		#sign-in-or-register {
+			.card {
+				width: 310px;
+				height: 400px;
+				.card-body {
+					margin: 0 auto;
+					width: 270px;
+					font-size: 0.8em;
+					.tab-content {
+						#g-signin {
+							#my-signin2 {
+								.abcRioButton {
+									width: 220px !important;
+								}
+							}						
+						}
+						.sign-in-body {
+							button[type="submit"] {
+								width: 220px;
+							}
+						}
+					}
+				}
 			}
 		}
 	}

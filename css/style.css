@@ -10736,6 +10736,11 @@ textarea.form-control-lg {
   font-size: 1.5em;
 }
 
+.navbar-dark {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 .navbar-dark .navbar-nav {
   display: flex;
   align-items: center;
@@ -10781,12 +10786,14 @@ textarea.form-control-lg {
   transform: translate(-50%, -50%);
   width: 400px;
   min-height: 400px;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 #sign-in-page #sign-in-or-register .card .card-body .nav-tabs {
   border-bottom: none;
 }
 #sign-in-page #sign-in-or-register .card .card-body .nav-tabs .nav-item {
+  font-size: 20px;
+  text-align: center;
   padding: 0;
 }
 #sign-in-page #sign-in-or-register .card .card-body .nav-tabs .nav-item .nav-link {
@@ -10869,10 +10876,56 @@ textarea.form-control-lg {
     height: 30px;
   }
   #sign-in-page #sign-in-or-register .card {
-    position: static;
-    top: 0%;
-    left: 0%;
-    transform: translate(0%, 0%);
+    width: 380px;
+    height: 500px;
+    overflow-y: scroll;
+  }
+  #sign-in-page #sign-in-or-register .card .card-body {
+    margin: 0 auto;
+    width: 320px;
+    font-size: 0.8em;
+  }
+  #sign-in-page #sign-in-or-register .card .card-body .nav .nav-item {
+    font-size: 18px;
+  }
+  #sign-in-page #sign-in-or-register .card .card-body .tab-content #g-signin * {
+    font-size: 0.9em;
+  }
+  #sign-in-page #sign-in-or-register .card .card-body .tab-content #g-signin #my-signin2 .abcRioButton {
+    width: 270px !important;
+  }
+  #sign-in-page #sign-in-or-register .card .card-body .tab-content .sign-in-body button[type=submit] {
+    width: 270px;
+  }
+  #sign-in-page #sign-in-or-register .card .card-body .tab-content .sign-in-body .name-sign-in {
+    display: block;
+  }
+  #sign-in-page #sign-in-or-register .card .card-body .tab-content .sign-in-body .name-sign-in input[type=text] {
+    max-width: 100%;
+  }
+}
+@media (max-width: 412px) {
+  #sign-in-page .back {
+    font-size: 0.8em;
+  }
+  #sign-in-page .back svg {
+    width: 30px;
+    height: 30px;
+  }
+  #sign-in-page #sign-in-or-register .card {
+    width: 310px;
+    height: 400px;
+  }
+  #sign-in-page #sign-in-or-register .card .card-body {
+    margin: 0 auto;
+    width: 270px;
+    font-size: 0.8em;
+  }
+  #sign-in-page #sign-in-or-register .card .card-body .tab-content #g-signin #my-signin2 .abcRioButton {
+    width: 220px !important;
+  }
+  #sign-in-page #sign-in-or-register .card .card-body .tab-content .sign-in-body button[type=submit] {
+    width: 220px;
   }
 }
 ::-webkit-scrollbar-track {

@@ -13,6 +13,7 @@ function renderButton() {
 	gapi.signin2.render('my-signin2', {
 		'scope': 'profile email',
 		'width': 320,
+		'font-size': 16,
 		'height': 50,
 		'longtitle': true,
 		'theme': 'dark',
@@ -20,7 +21,6 @@ function renderButton() {
 		'onfailure': onFailure
 	});
 }
-
 
 
 
