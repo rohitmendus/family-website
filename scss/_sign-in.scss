@@ -1,5 +1,6 @@
 @use "variables_mixins" as *;
 
+// Start of sign in page
 #sign-in-page {
 	.back {
 		color: white;
@@ -32,8 +33,6 @@
 				.nav-tabs {
 					border-bottom: none;
 					.nav-item {
-						font-size: 20px;
-						text-align: center;
 						padding: 0;
 						.nav-link {
 							width: 100%;
@@ -54,6 +53,9 @@
 						margin-top: 30px;
 						#g-signin {
 							margin-bottom: 20px;
+							span {
+								font-family: 'Open Sans', sans-serif;
+							}
 						}
 						button[type="submit"] {
 							margin-left: auto;
@@ -75,3 +77,4 @@
 		}
 	}
 }
+// End of sign in page

@@ -1,5 +1,7 @@
 @use "_variables_mixins";
 
+
+// Medium devices
 @media (max-width: 992px) {
 	.navbar-dark {
 		.navbar-collapse {
@@ -21,9 +23,21 @@
 			}
 		}
 	}
+	.jumbotron-main {
+		.container {
+			#family-icon {
+				width: 200px;
+				height: 200px;
+			}
+			h1 {
+				font-size: 3.5em;
+			}
+		}
+	}
 }
 
 
+// Tablet devices
 @media (max-width: 767px) {
 	.navbar-brand {
 		margin-left: 10px;
@@ -92,6 +106,13 @@
 			}
 		}
 	}
+	.jumbotron-main {
+		.container {
+			h1 {
+				font-size: 3em;
+			}
+		}
+	}
 }
 
 
@@ -128,6 +149,18 @@
 						}
 					}
 				}
+			}
+		}
+	}
+	.jumbotron-main {
+		height: 350px;
+		.container {
+			#family-icon {
+				width: 150px;
+				height: 150px;
+			}
+			h1 {
+				font-size: 2.5em;
 			}
 		}
 	}

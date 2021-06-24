@@ -23,7 +23,6 @@ function renderButton() {
 }
 
 
-
 // Validation of sign-in
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function () {
@@ -73,6 +72,12 @@ function check_login() {
 		not_sign_in_nav.style.display = "block";
 		not_sign_in_pro.style.display = "block";
 	}
+}
+
+
+function sign_out () {
+	signIn = !(signIn);
+	check_login();
 }
 
 check_login();

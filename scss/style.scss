@@ -1,8 +1,24 @@
+// Importing files
 @use "variables_mixins" as *;
-
 @use "header";
 @use "sign-in";
 @use "responsive";
+
+// Importing fonts
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Open+Sans&family=Poppins&display=swap');
+// font-family: 'Arvo', serif;
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Poppins', sans-serif;
+
+// Basic Styles
+body, p, span {
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Arvo', serif;
+}
+
 
 // Scrollbar styles START
 ::-webkit-scrollbar-track

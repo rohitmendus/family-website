@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Arvo&family=Open+Sans&family=Poppins&display=swap");
 /*!
  * Bootstrap v5.0.1 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -10734,6 +10735,7 @@ textarea.form-control-lg {
 }
 .navbar-brand span {
   font-size: 1.5em;
+  font-family: "Arvo", serif;
 }
 
 .navbar-dark {
@@ -10748,6 +10750,7 @@ textarea.form-control-lg {
 }
 .navbar-dark .navbar-nav .nav-item {
   font-size: 1.25em;
+  font-family: "Poppins", sans-serif;
 }
 .navbar-dark .navbar-nav .nav-item .nav-link {
   color: white;
@@ -10760,6 +10763,31 @@ textarea.form-control-lg {
 }
 .navbar-dark .navbar-nav .dropdown .profile-img {
   border-radius: 50%;
+}
+
+.jumbotron-main {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url("../images/jumbotron.jpg");
+  background-attachment: static;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 390px;
+  display: flex;
+  align-items: center;
+}
+.jumbotron-main .container {
+  text-align: center;
+  color: white;
+}
+.jumbotron-main .container #family-icon {
+  border-radius: 50%;
+  width: 230px;
+  height: 230px;
+  margin: 10px;
+}
+.jumbotron-main .container h1 {
+  font-size: 3.8em;
 }
 
 #sign-in-page .back {
@@ -10792,8 +10820,6 @@ textarea.form-control-lg {
   border-bottom: none;
 }
 #sign-in-page #sign-in-or-register .card .card-body .nav-tabs .nav-item {
-  font-size: 20px;
-  text-align: center;
   padding: 0;
 }
 #sign-in-page #sign-in-or-register .card .card-body .nav-tabs .nav-item .nav-link {
@@ -10813,6 +10839,9 @@ textarea.form-control-lg {
 }
 #sign-in-page #sign-in-or-register .card .card-body .tab-content .sign-in-body #g-signin {
   margin-bottom: 20px;
+}
+#sign-in-page #sign-in-or-register .card .card-body .tab-content .sign-in-body #g-signin span {
+  font-family: "Open Sans", sans-serif;
 }
 #sign-in-page #sign-in-or-register .card .card-body .tab-content .sign-in-body button[type=submit] {
   margin-left: auto;
@@ -10845,6 +10874,14 @@ textarea.form-control-lg {
   .navbar-dark .navbar-brand .logo-img {
     width: 40px;
     height: 40px;
+  }
+
+  .jumbotron-main .container #family-icon {
+    width: 200px;
+    height: 200px;
+  }
+  .jumbotron-main .container h1 {
+    font-size: 3.5em;
   }
 }
 @media (max-width: 767px) {
@@ -10903,6 +10940,10 @@ textarea.form-control-lg {
   #sign-in-page #sign-in-or-register .card .card-body .tab-content .sign-in-body .name-sign-in input[type=text] {
     max-width: 100%;
   }
+
+  .jumbotron-main .container h1 {
+    font-size: 3em;
+  }
 }
 @media (max-width: 412px) {
   #sign-in-page .back {
@@ -10927,7 +10968,26 @@ textarea.form-control-lg {
   #sign-in-page #sign-in-or-register .card .card-body .tab-content .sign-in-body button[type=submit] {
     width: 220px;
   }
+
+  .jumbotron-main {
+    height: 350px;
+  }
+  .jumbotron-main .container #family-icon {
+    width: 150px;
+    height: 150px;
+  }
+  .jumbotron-main .container h1 {
+    font-size: 2.5em;
+  }
 }
+body, p, span {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Arvo", serif;
+}
+
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #F5F5F5;
