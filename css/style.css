@@ -10793,8 +10793,16 @@ textarea.form-control-lg {
   font-size: 3.8em;
 }
 
+#about_us {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url("../images/about.jpg");
+  background-attachment: static;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 #sign-in-page {
-  background: url("../images/sign_in.jpg") no-repeat center center fixed;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url("../images/sign_in.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -10813,7 +10821,7 @@ textarea.form-control-lg {
   right: 0;
 }
 #sign-in-page .back div {
-  margin: 10px 0px 0px 20px;
+  margin: 10px 0px 10px 20px;
 }
 #sign-in-page .back div:hover {
   color: rgba(255, 255, 255, 0.9);
@@ -10932,7 +10940,7 @@ textarea.form-control-lg {
   }
   #sign-in-page #sign-in-or-register .card {
     width: 380px;
-    height: 500px;
+    height: 450px;
     overflow-y: auto;
   }
   #sign-in-page #sign-in-or-register .card .card-body {
