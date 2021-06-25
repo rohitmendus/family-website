@@ -2,21 +2,34 @@
 
 // Start of sign in page
 #sign-in-page {
+	background: url("../images/sign_in.jpg") no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
 	.back {
+		background-color: black;
+		opacity: 0.6;
 		color: white;
 		display: block;
 		text-decoration: none;
-		margin: 10px 0px 0px 20px;
 		cursor: pointer;
-		&:hover {
-			color: rgba(255, 255, 255, 0.7);
-			transition: color 300ms ease-in 300ms;
-		}
-		span {
-			margin-left: 10px;
-			font-size: 2em;
-			vertical-align: middle;
-			cursor: pointer;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		div {
+			margin: 10px 0px 0px 20px;
+			&:hover {
+				color: rgba(255, 255, 255, 0.9);
+				transition: color 300ms ease-in 300ms;
+			}
+			span {
+				margin-left: 10px;
+				font-size: 2em;
+				vertical-align: middle;
+				cursor: pointer;
+			}
 		}
 	}
 
