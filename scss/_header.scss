@@ -24,11 +24,11 @@
 			.nav-link{
 				color: white;
 				&:hover {
-					color: rgba(255, 255, 255, 0.8);
+					color: rgba(255, 255, 255, 0.5);
 				}
 			}
 			.active {
-				color: rgba(255, 255, 255, 0.8);
+				color: rgba(255, 255, 255, 0.5);
 			}
 		}
 		.dropdown {
@@ -62,6 +62,7 @@
 		}
 		h1 {
 			font-size: 3.8em;
+			text-shadow: 2px 2px 4px black;
 		}
 	}
 }

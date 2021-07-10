@@ -1,11 +1,47 @@
 // Start of About Section
 
 #about_us {
-	background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url('../images/about.jpg');
-	background-attachment: static;
-    background-position: center;
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url('../images/about_us.jpg');
+	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	.content {
+		padding: 50px 0 125px;
+		h1 {
+			font-family: 'Arvo', serif;
+			color: white;
+			font-size: 2.5em;
+		}
+		p {
+			color: white;
+			padding-top: 10px;
+			font-family: 'Poppins', sans-serif;
+			font-size: 1.25em;
+		}
+		#about-images {
+			position: relative;
+			img {
+				width: 348px;
+				height: 261px;
+				border: 8px solid white;
+				position: absolute;
+			}
+			#img1 {           
+				position: absolute;
+				top: 0;
+				right: 0;
+				transform: rotate(3deg)
+			}
+			#img2 {
+				z-index: 9;
+				margin-top: 110px;
+				margin-left: 70px;
+				transform: rotate(357deg)
+			}
+		}
+	}
 }
-
+// font-family: 'Arvo', serif;
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Poppins', sans-serif;
 // End of About Section

@@ -10756,10 +10756,10 @@ textarea.form-control-lg {
   color: white;
 }
 .navbar-dark .navbar-nav .nav-item .nav-link:hover {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.5);
 }
 .navbar-dark .navbar-nav .nav-item .active {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.5);
 }
 .navbar-dark .navbar-nav .dropdown {
   margin-left: 10px;
@@ -10791,14 +10791,49 @@ textarea.form-control-lg {
 }
 .jumbotron-main .container h1 {
   font-size: 3.8em;
+  text-shadow: 2px 2px 4px black;
 }
 
 #about_us {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url("../images/about.jpg");
-  background-attachment: static;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url("../images/about_us.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+#about_us .content {
+  padding: 50px 0 125px;
+}
+#about_us .content h1 {
+  font-family: "Arvo", serif;
+  color: white;
+  font-size: 2.5em;
+}
+#about_us .content p {
+  color: white;
+  padding-top: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25em;
+}
+#about_us .content #about-images {
+  position: relative;
+}
+#about_us .content #about-images img {
+  width: 348px;
+  height: 261px;
+  border: 8px solid white;
+  position: absolute;
+}
+#about_us .content #about-images #img1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: rotate(3deg);
+}
+#about_us .content #about-images #img2 {
+  z-index: 9;
+  margin-top: 110px;
+  margin-left: 70px;
+  transform: rotate(357deg);
 }
 
 #sign-in-page {
@@ -10909,6 +10944,24 @@ textarea.form-control-lg {
   .jumbotron-main .container h1 {
     font-size: 3.5em;
   }
+
+  #about_us .content {
+    padding: 35px 0;
+  }
+  #about_us .content h1 {
+    font-size: 2.25em;
+  }
+  #about_us .content p {
+    font-size: 1.15em;
+  }
+  #about_us .content #about-images img {
+    width: 300px;
+    height: 225px;
+  }
+  #about_us .content #about-images #img2 {
+    margin-top: 100px;
+    margin-left: 50px;
+  }
 }
 @media (max-width: 767px) {
   .navbar-brand {
@@ -10970,6 +11023,35 @@ textarea.form-control-lg {
   .jumbotron-main .container h1 {
     font-size: 3em;
   }
+
+  #about_us .content {
+    padding: 50px 10px;
+  }
+  #about_us .content h1 {
+    text-align: center;
+    font-size: 2.1em;
+    padding-bottom: 10px;
+  }
+  #about_us .content p {
+    padding: 0;
+    font-size: 1.05em;
+  }
+  #about_us .content #about-images {
+    width: 420px;
+    height: 320px;
+    position: relative;
+  }
+  #about_us .content #about-images img {
+    width: 260px;
+    height: 195px;
+  }
+  #about_us .content #about-images #img1 {
+    left: 10%;
+  }
+  #about_us .content #about-images #img2 {
+    margin-top: 70px;
+    margin-left: 100px;
+  }
 }
 @media (max-width: 412px) {
   #sign-in-page .back {
@@ -11004,6 +11086,31 @@ textarea.form-control-lg {
   }
   .jumbotron-main .container h1 {
     font-size: 2.5em;
+  }
+
+  #about_us .content {
+    padding: 30px 10px;
+  }
+  #about_us .content h1 {
+    text-align: center;
+    font-size: 8vw;
+  }
+  #about_us .content p {
+    padding: 20px 0;
+    font-size: 3.9vw;
+  }
+  #about_us .content #about-images {
+    width: 330px;
+    height: 230px;
+    position: relative;
+  }
+  #about_us .content #about-images img {
+    width: 200px;
+    height: 150px;
+  }
+  #about_us .content #about-images #img2 {
+    margin-top: 70px;
+    margin-left: 70px;
   }
 }
 body, p, span {
