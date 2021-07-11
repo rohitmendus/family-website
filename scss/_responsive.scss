@@ -58,6 +58,20 @@
 			}
 		}
 	}
+	#articles {
+		.card {
+			.card-body {
+				.item {
+					.image {
+						svg {
+							height: 65px;
+							width: 66px;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 
@@ -167,6 +181,30 @@
 			}
 		}
 	}
+	#articles {
+		.card {
+			.card-body {
+				.item {
+					.image {
+						svg {
+							height: 60px;
+							width: 60px;
+						}
+					}
+					.text {
+						a {
+							h3 {
+								font-size: 1.25em;
+							}
+						}
+						small {
+							font-size: 0.8em;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 
@@ -240,6 +278,35 @@
 				#img2 {
 					margin-top: 70px;
 					margin-left: 70px;
+				}
+			}
+		}
+	}
+	#articles {
+		.card {
+			.card-body {
+				.item {
+					.image {
+						svg {
+							height: 50px;
+							width: 50px;
+						}
+					}
+					.text {
+						a {
+							h3 {
+								font-size: 1em;
+							}
+						}
+						small {
+							font-size: 0.7em;
+						}
+					}
+				}
+				#read_more {
+					a {
+						font-size: 4vw;
+					}
 				}
 			}
 		}

@@ -10836,6 +10836,51 @@ textarea.form-control-lg {
   transform: rotate(357deg);
 }
 
+#articles {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-image: url("../images/articles.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#articles .card {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+#articles .card .card-header {
+  text-align: center;
+  border-bottom: 1px solid white;
+}
+#articles .card .card-body .item {
+  margin-bottom: 20px;
+  box-shadow: 0px 24px 3px -24px white;
+  padding: 20px;
+}
+#articles .card .card-body .item .text {
+  margin-left: 30px;
+}
+#articles .card .card-body .item .text a {
+  text-decoration: none;
+  color: white;
+}
+#articles .card .card-body .item .text a h3 {
+  font-size: 1.5em;
+}
+#articles .card .card-body .item .text small {
+  font-family: "Poppins", sans-serif;
+  color: rgba(255, 255, 255, 0.7);
+}
+#articles .card .card-body #read_more {
+  text-align: right;
+  padding: 0px 15px;
+}
+#articles .card .card-body #read_more a {
+  text-decoration: none;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
 #sign-in-page {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url("../images/sign_in.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -10962,6 +11007,11 @@ textarea.form-control-lg {
     margin-top: 100px;
     margin-left: 50px;
   }
+
+  #articles .card .card-body .item .image svg {
+    height: 65px;
+    width: 66px;
+  }
 }
 @media (max-width: 767px) {
   .navbar-brand {
@@ -11052,6 +11102,17 @@ textarea.form-control-lg {
     margin-top: 70px;
     margin-left: 100px;
   }
+
+  #articles .card .card-body .item .image svg {
+    height: 60px;
+    width: 60px;
+  }
+  #articles .card .card-body .item .text a h3 {
+    font-size: 1.25em;
+  }
+  #articles .card .card-body .item .text small {
+    font-size: 0.8em;
+  }
 }
 @media (max-width: 412px) {
   #sign-in-page .back {
@@ -11111,6 +11172,20 @@ textarea.form-control-lg {
   #about_us .content #about-images #img2 {
     margin-top: 70px;
     margin-left: 70px;
+  }
+
+  #articles .card .card-body .item .image svg {
+    height: 50px;
+    width: 50px;
+  }
+  #articles .card .card-body .item .text a h3 {
+    font-size: 1em;
+  }
+  #articles .card .card-body .item .text small {
+    font-size: 0.7em;
+  }
+  #articles .card .card-body #read_more a {
+    font-size: 4vw;
   }
 }
 body, p, span {
