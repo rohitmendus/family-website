@@ -1,0 +1,45 @@
+// Start of books section
+
+#books {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background-image: url('../images/books.jpg');
+	background-color: red;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	.carousel {
+		.carousel-indicators {
+			li {
+				border-radius: 50%;
+				width: 10px;
+				height: 10px;
+			}	
+		}
+		.carousel-inner {
+			.carousel-item {
+				padding-bottom: 50px;
+				.card {
+					height: 500px;
+					width: 250px;
+					margin-left: auto;
+					margin-right: auto;
+					.card-img-top {
+						width: 200px;
+						height: 250px;
+						margin: 0 auto;
+					}
+					.card-body {
+						padding: 10px;
+						text-align: center;
+						.rating {
+							margin-bottom: 5px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// End of books section

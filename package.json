@@ -18,5 +18,6 @@
   "homepage": "https://github.com/rohitmendus/family-website#readme",
   "devDependencies": {
     "sass": "^1.34.1"
-  }
+  },
+  "dependencies": {}
 }

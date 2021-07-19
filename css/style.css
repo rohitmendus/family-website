@@ -10881,6 +10881,42 @@ textarea.form-control-lg {
   font-family: "Poppins", sans-serif;
 }
 
+#books {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-image: url("../images/books.jpg");
+  background-color: red;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#books .carousel .carousel-indicators li {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+#books .carousel .carousel-inner .carousel-item {
+  padding-bottom: 50px;
+}
+#books .carousel .carousel-inner .carousel-item .card {
+  height: 500px;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#books .carousel .carousel-inner .carousel-item .card .card-img-top {
+  width: 200px;
+  height: 250px;
+  margin: 0 auto;
+}
+#books .carousel .carousel-inner .carousel-item .card .card-body {
+  padding: 10px;
+  text-align: center;
+}
+#books .carousel .carousel-inner .carousel-item .card .card-body .rating {
+  margin-bottom: 5px;
+}
+
 #sign-in-page {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url("../images/sign_in.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
