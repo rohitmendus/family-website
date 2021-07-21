@@ -10804,8 +10804,6 @@ textarea.form-control-lg {
   padding: 50px 0 125px;
 }
 #about_us .content h1 {
-  font-family: "Arvo", serif;
-  color: white;
   font-size: 2.5em;
 }
 #about_us .content p {
@@ -10885,10 +10883,16 @@ textarea.form-control-lg {
   padding-top: 30px;
   padding-bottom: 30px;
   background-image: url("../images/books.jpg");
-  background-color: red;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+#books h1 {
+  font-size: 2.8em;
+  text-align: center;
+  margin: 30px 0;
 }
 #books .carousel .carousel-indicators li {
   border-radius: 50%;
@@ -10901,20 +10905,17 @@ textarea.form-control-lg {
 #books .carousel .carousel-inner .carousel-item .card {
   height: 500px;
   width: 250px;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 }
 #books .carousel .carousel-inner .carousel-item .card .card-img-top {
-  width: 200px;
-  height: 250px;
+  width: 175px;
+  height: 275px;
   margin: 0 auto;
 }
 #books .carousel .carousel-inner .carousel-item .card .card-body {
   padding: 10px;
   text-align: center;
-}
-#books .carousel .carousel-inner .carousel-item .card .card-body .rating {
-  margin-bottom: 5px;
 }
 
 #sign-in-page {
@@ -11048,6 +11049,10 @@ textarea.form-control-lg {
     height: 65px;
     width: 66px;
   }
+
+  #books h1 {
+    font-size: 2.5em;
+  }
 }
 @media (max-width: 767px) {
   .navbar-brand {
@@ -11149,6 +11154,25 @@ textarea.form-control-lg {
   #articles .card .card-body .item .text small {
     font-size: 0.8em;
   }
+
+  #books h1 {
+    font-size: 2.5em;
+  }
+  #books .carousel .carousel-inner .carousel-item .card {
+    height: 450px;
+    font-size: 0.95em;
+  }
+  #books .carousel .carousel-inner .carousel-item .card .card-img-top {
+    width: 170px;
+    height: 250px;
+    margin: 0 auto;
+  }
+  #books .carousel .carousel-inner .carousel-item .card .card-body .rating .number {
+    font-size: 0.7em;
+  }
+  #books .carousel .carousel-inner .carousel-item .card .card-body .btn {
+    font-size: 0.95em;
+  }
 }
 @media (max-width: 412px) {
   #sign-in-page .back {
@@ -11223,6 +11247,22 @@ textarea.form-control-lg {
   #articles .card .card-body #read_more a {
     font-size: 4vw;
   }
+
+  #books h1 {
+    font-size: 10vw;
+  }
+  #books .carousel .carousel-inner .carousel-item .card {
+    height: 425px;
+    font-size: 0.9em;
+  }
+  #books .carousel .carousel-inner .carousel-item .card .card-img-top {
+    width: 150px;
+    height: 225px;
+    margin: 0 auto;
+  }
+  #books .carousel .carousel-inner .carousel-item .card .card-body .btn {
+    font-size: 0.9em;
+  }
 }
 body, p, span {
   font-family: "Open Sans", sans-serif;
@@ -11230,6 +11270,7 @@ body, p, span {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Arvo", serif;
+  color: white;
 }
 
 ::-webkit-scrollbar-track {

@@ -72,6 +72,11 @@
 			}
 		}
 	}
+	#books {
+		h1 {
+			font-size: 2.5em;
+		}
+	}
 }
 
 
@@ -205,6 +210,36 @@
 			}
 		}
 	}
+	#books {
+		h1 {
+			font-size: 2.5em;
+		}
+		.carousel {
+			.carousel-inner {
+				.carousel-item {
+					.card {
+						height: 450px;
+						font-size: 0.95em;
+						.card-img-top {
+							width: 170px;
+							height: 250px;
+							margin: 0 auto;
+						}
+						.card-body {
+							.rating {
+								.number {
+									font-size: 0.7em;
+								}
+							}
+							.btn {
+								font-size: 0.95em;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 
@@ -311,7 +346,29 @@
 			}
 		}
 	}
+	#books {
+		h1 {
+			font-size: 10vw;
+		}
+		.carousel {
+			.carousel-inner {
+				.carousel-item {
+					.card {
+						height: 425px;
+						font-size: 0.9em;
+						.card-img-top {
+							width: 150px;
+							height: 225px;
+							margin: 0 auto;
+						}
+						.card-body {
+							.btn {
+								font-size: 0.9em;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
-
-
-

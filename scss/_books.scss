@@ -4,10 +4,16 @@
 	padding-top: 30px;
 	padding-bottom: 30px;
 	background-image: url('../images/books.jpg');
-	background-color: red;
+	background-color: rgba(0, 0, 0, 0.5);
+	background-blend-mode: multiply;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	h1 {
+		font-size: 2.8em;
+		text-align: center;
+		margin: 30px 0;
+	}
 	.carousel {
 		.carousel-indicators {
 			li {
@@ -22,24 +28,23 @@
 				.card {
 					height: 500px;
 					width: 250px;
-					margin-left: auto;
 					margin-right: auto;
+					margin-left: auto;
 					.card-img-top {
-						width: 200px;
-						height: 250px;
+						width: 175px;
+						height: 275px;
 						margin: 0 auto;
 					}
 					.card-body {
 						padding: 10px;
 						text-align: center;
-						.rating {
-							margin-bottom: 5px;
-						}
 					}
 				}
 			}
 		}
 	}
 }
+
+
 
 // End of books section
