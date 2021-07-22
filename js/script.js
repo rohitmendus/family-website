@@ -59,8 +59,6 @@ function check_login() {
 	let not_sign_in_nav = document.getElementById('not-signed-in-nav');
 	let sign_in_pro = document.getElementById('signed-in-pro');
 	let not_sign_in_pro = document.getElementById('not-signed-in-pro');
-	console.log(sign_in_nav, sign_in_pro);
-	console.log(not_sign_in_nav, not_sign_in_pro);
 	if (signIn) {
 		sign_in_nav.style.display = "block";
 		sign_in_pro.style.display = "block";
@@ -75,7 +73,32 @@ function check_login() {
 }
 
 
-function sign_out () {
+// Gallery viewer 
+var images = document.querySelectorAll('#gallery .img-fluid');
+var gallery = document.querySelector("#gallery")
+
+for (let i of images) {
+	i.addEventListener("click", view_image);
+}
+
+function view_image(e) {
+	console.log(e.target);
+	document.body.style.overflowY = "hidden";
+	let img_viewer = document.getElementById("image-viewer");
+	img_viewer.style.display = "block"
+	let file_name = e.target.src.split("images/")[1];
+	let file_text = document.querySelector("#image-viewer p");
+	file_text.textContent = file_name;	
+}
+
+
+function img_back() {
+	document.body.style.overflowY = "auto";
+	document.getElementById("image-viewer").style.display = "none";
+}
+
+
+function sign_out() {
 	signIn = !(signIn);
 	check_login();
 }
