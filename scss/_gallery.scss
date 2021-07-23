@@ -21,6 +21,10 @@
 				position: relative;
 				img {
 					box-shadow: 1px 1px 2px;
+					height: 100%;
+					&:hover {
+						cursor: pointer;
+					}
 				}
 				span {
 					position: absolute;
@@ -70,6 +74,7 @@
 			left: 50%;
 			transform: translate(-50%, -50%);
 			max-height: 400px;
+			max-width: 600px;
 		}
 		span {
 			color: white;
@@ -80,12 +85,32 @@
 			transform: translate(-50%, -50%);
 		}
 		p {
-			font-size: 1.5em;
+			font-size: 1.4em;
 			position: absolute;
 			top: 0;
 			left: 50px;
 			padding: 15px;
 			color: white;
+			svg {
+				margin-left: 10px;
+				height: 20px;
+				width: 20px
+			}
+		}
+		.next-icon, .prev-icon {
+			top: 50%;
+			position: absolute;
+			margin-right: 47.5px;
+			svg {
+				height: 80px;
+				width: 80px;
+			}
+		}
+		.next-icon {
+			right: 50px;
+		}
+		.prev-icon {
+			left: 50px;
 		}
 	}
 }

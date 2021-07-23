@@ -81,22 +81,44 @@ for (let i of images) {
 	i.addEventListener("click", view_image);
 }
 
+var clicked_image;
+
 function view_image(e) {
-	console.log(e.target);
+	clicked_image = e.target;
+	display_img(clicked_image);
+}
+
+function display_img(img) {
 	document.body.style.overflowY = "hidden";
 	let img_viewer = document.getElementById("image-viewer");
 	img_viewer.style.display = "block"
-	let file_name = e.target.src.split("images/")[1];
-	let file_text = document.querySelector("#image-viewer p");
-	file_text.textContent = file_name;	
+	let file_name = img.src.split("images/")[1];
+	let file_text = document.querySelector("#image-viewer p").childNodes[0];
+	file_text.nodeValue = file_name;
+	let desc = img.nextElementSibling.innerHTML;
+	document.getElementById("img-desc").textContent = desc;
+	document.getElementById("view_img").src = img.src;
 }
 
+
+function next_img() {
+	if (clicked_image.parentNode.nextElementSibling !== null) {
+		clicked_image = clicked_image.parentNode.nextElementSibling.firstElementChild;
+		display_img(clicked_image);
+	}
+}
+
+function prev_img() {
+	if (clicked_image.parentNode.previousElementSibling !== null) {
+		clicked_image = clicked_image.parentNode.previousElementSibling.firstElementChild;
+		display_img(clicked_image);
+	}
+}
 
 function img_back() {
 	document.body.style.overflowY = "auto";
 	document.getElementById("image-viewer").style.display = "none";
 }
-
 
 function sign_out() {
 	signIn = !(signIn);
