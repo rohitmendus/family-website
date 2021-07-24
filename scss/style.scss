@@ -5,6 +5,7 @@
 @use "articles";
 @use "books";
 @use "gallery";
+@use "footer";
 @use "sign-in";
 @use "responsive";
 
@@ -15,7 +16,7 @@
 // font-family: 'Poppins', sans-serif;
 
 // Basic Styles
-body, p, span {
+body, p, span, pre {
 	font-family: 'Open Sans', sans-serif;
 }
 

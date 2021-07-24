@@ -100,6 +100,38 @@
 			}
 		}
 	}
+	#footer {
+		.container {
+			.row {
+				.col-md-4 {
+					h3{
+						font-size: 1.5em;
+					}
+				}
+				.site-links {
+					text-align: center;
+				}
+				.message {
+					form {
+						.form-floating {
+							font-size: 0.9em;
+							textarea {
+								min-height: 70px;
+								font-size: 0.9em;
+							}
+							input {
+								font-size: 0.9em;
+							}
+							button {
+								width: auto;
+								font-size: 0.9em;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 
@@ -292,6 +324,30 @@
 			}
 			.prev-icon {
 				left: 5%;
+			}
+		}
+	}
+	#footer {
+		padding: 30px 25px;
+		.container {
+			.row {
+				.site-links {
+					text-align: justify;
+					ul {
+						padding-left: 20px;
+					}
+				}
+				.contact-us {
+					p {
+						padding-left: 20px;
+					}
+				}
+				.col-md-4 {
+					margin-bottom: 30px;
+					h3 {
+						font-size: 1.3em;
+					}
+				}
 			}
 		}
 	}
