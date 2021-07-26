@@ -52,7 +52,14 @@ function renderButton() {
 
 
 // Main Page Start
-var signIn = false;
+let url_link = window.location.href.length
+let link = window.location.href.slice(url_link-10, url_link+1);
+console.log(link);
+if (link === "index.html") {
+	var signIn = false;
+} else {
+	signIn = true;
+}
 
 function check_login() {
 	let sign_in_nav = document.getElementById('signed-in-nav');
@@ -71,6 +78,14 @@ function check_login() {
 		not_sign_in_pro.style.display = "block";
 	}
 }
+
+
+function sign_out() {
+	signIn = !(signIn);
+	check_login();
+}
+
+check_login();
 
 
 // Gallery viewer 
@@ -120,10 +135,18 @@ function img_back() {
 	document.getElementById("image-viewer").style.display = "none";
 }
 
-function sign_out() {
-	signIn = !(signIn);
-	check_login();
+
+
+
+
+
+// Sign In continuation redirect
+function redirectSignIn() {
+	let eval = document.querySelector("#sign-in form").classList.contains("was-validated");
+	console.log(eval);
+	signIn = true;
+	let url = window.location.href.split("/sign-in.html")[0];
+	// window.location.href = url + "/dashboard.html"
 }
 
-check_login();
 // Main Page End
