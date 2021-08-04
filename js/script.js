@@ -1,10 +1,20 @@
 // common script
 let url_link = window.location.href.length;
-
 let link = window.location.href.slice(url_link-12, url_link+1);
+
+
 if (link==="sign-in.html") {
 	// Sign in page start
-	console.log('In sign in page');
+
+	var tab = localStorage['tab_type'];
+	localStorage.removeItem("tab_type");
+	if (tab === "reg") {
+		var trigger_reg = document.querySelector('#register-tab');
+		var reg_tab = new bootstrap.Tab(trigger_reg)
+		reg_tab.show()
+	}
+
+
 	// Customising google sign in button
 	function onSuccess(googleUser) {
 		console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
@@ -48,6 +58,7 @@ if (link==="sign-in.html") {
 	  	}, false)
 	  })
 	})()
+
 
 	// Sign In continuation redirect
 	document.querySelector("#sign-in form").addEventListener("submit", redirectSignIn);
@@ -148,6 +159,15 @@ if (link==="sign-in.html") {
 	function img_back() {
 		document.body.style.overflowY = "auto";
 		document.getElementById("image-viewer").style.display = "none";
+	}
+
+
+
+	// Open register tab
+	function open_reg_tab() {
+		var tab = "reg";
+		localStorage.setItem('tab_type', tab);
+		window.location.href = "sign-in.html";
 	}
 
 
