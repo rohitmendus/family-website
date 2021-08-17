@@ -7,7 +7,7 @@ if (link==="sign-in.html") {
 	// Sign in page start
 
 	var tab = localStorage['tab_type'];
-	// localStorage.removeItem("tab_type");
+	localStorage.removeItem("tab_type");
 	if (tab === "reg") {
 		var trigger_reg = document.querySelector('#register-tab');
 		var reg_tab = new bootstrap.Tab(trigger_reg)
