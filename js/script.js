@@ -7,7 +7,7 @@ if (link==="sign-in.html") {
 	// Sign in page start
 
 	var tab = localStorage['tab_type'];
-	localStorage.removeItem("tab_type");
+	// localStorage.removeItem("tab_type");
 	if (tab === "reg") {
 		var trigger_reg = document.querySelector('#register-tab');
 		var reg_tab = new bootstrap.Tab(trigger_reg)
@@ -81,7 +81,7 @@ if (link==="sign-in.html") {
 	url_link = window.location.href.length;
 	link = window.location.href.slice(url_link-10, url_link+1);
 	console.log(link);
-	if (link === "index.html") {
+	if (link === "index.html"|link === "y-website/") {
 		var signIn = false;
 	} else {
 		signIn = true;
