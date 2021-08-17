@@ -172,4 +172,29 @@ if (link==="sign-in.html") {
 
 
 	// Main Page End
+	
+
+	// Start of Dashboard
+	url_link = window.location.href.length;
+	link = window.location.href.slice(url_link-14, url_link+1);
+	if (link === "dashboard.html") {
+		// Start of find people section
+		var search = document.getElementById('srch-ppl');
+		var list = document.getElementById('ppl');
+		search.addEventListener('keyup', searchItem);
+		search.addEventListener('focus', searchItem);
+		function searchItem(e) {
+			let seacrhValue = search.value.toLowerCase();
+			let childItems = list.children;
+			for (let child of childItems) {
+				if (child.textContent.toLowerCase().indexOf(seacrhValue) === -1) {
+					child.style.display = "none";
+				} else {
+					child.style.display = "block";
+				}
+			}
+		}
+		// End of find people section
+	}
+	// End of dashboard
 }

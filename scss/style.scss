@@ -1,5 +1,5 @@
 // Importing files
-@use "variables_mixins" as *;
+@use "variables_mixins";
 @use "header";
 @use "about";
 @use "articles";
@@ -7,6 +7,7 @@
 @use "gallery";
 @use "footer";
 @use "sign-in";
+@use "dashboard";
 @use "responsive";
 
 // Importing fonts

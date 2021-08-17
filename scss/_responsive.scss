@@ -351,6 +351,28 @@
 			}
 		}
 	}
+	#dashboard {
+		.nav-pills {
+			.nav-link {
+				margin: 8px 5px;
+				padding: 0 9px;
+				font-size: 1.25em
+			}
+		}
+		.tab-content {
+			#pills-ppl {
+				* {
+					font-size: 0.95em;
+				}
+				div {
+					#srch-ppl {
+						font-size: 1em;
+						background-size: 20px;
+					}
+				}
+			}
+		}
+	}
 }
 
 
@@ -505,6 +527,28 @@
 				svg {
 					width: 60px;
 					height: 60px;
+				}
+			}
+		}
+	}
+	#dashboard {
+		.nav-pills {
+			.nav-link {
+				margin: 8px 5px;
+				padding: 0 5px;
+				font-size: 1.1em
+			}
+		}
+		.tab-content {
+			#pills-ppl {
+				* {
+					font-size: 3.9vw;
+				}
+				div {
+					#srch-ppl {
+						font-size: 3.9vw;
+						background-size: 18px;
+					}
 				}
 			}
 		}

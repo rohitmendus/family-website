@@ -1,0 +1,68 @@
+// Start of dashboard page
+@import "variables_mixins.scss";
+
+#dashboard {
+	padding: 0px 0px 30px;
+	background-image: url('../images/dashboard.jpg');
+	background-color: rgba(0, 0, 0, 0.3);
+	background-blend-mode: multiply;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	.nav-pills {
+		.nav-link {
+			color: white;
+			font-family:'Poppins', sans-serif;
+			font-size: 1.35em;
+			padding-bottom: 0;
+			margin: 0 30px;
+			border-radius: 0;
+			background-color: transparent;
+			&:hover {
+				border-bottom: 3px solid white;
+			}
+		}
+		.active {
+			border-bottom: 3px solid white;
+		}
+	}
+	.tab-content {
+		color: white;
+		#pills-ppl {
+			div {
+				margin: 20px 0;
+				#srch-ppl {
+					border: 1px solid $primary;
+					border-radius: 4px;
+					font-size: 16px;
+					font-family: 'Open Sans', sans-serif;
+					background-color: white;
+					background-image: url('../images/searchicon.png');
+					background-size: 23px;
+					background-position: 10px 50%; 
+					background-repeat: no-repeat;
+					padding: 12px 20px 12px 40px;
+					-webkit-transition: width 0.4s ease-in-out;
+					transition: width 0.4s ease-in-out;
+				}
+			}
+			ul {
+				li {
+					padding: 15px;
+					margin-bottom: 2px;
+					cursor: pointer;
+					img {
+						width: 25px;
+						height: 25px;
+					}
+					span {
+						margin-left: 10px;
+						font-family: 'Open Sans', sans-serif;
+					}
+				}
+			}
+		}
+	}
+}
+
+// End of Dashboard Page
