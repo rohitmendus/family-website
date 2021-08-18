@@ -165,7 +165,7 @@ if (link==="sign-in.html") {
 
 	// Open register tab
 	function open_reg_tab() {
-		var tab = "reg";
+		let tab = "reg";
 		localStorage.setItem('tab_type', tab);
 		window.location.href = "sign-in.html";
 	}
@@ -178,9 +178,11 @@ if (link==="sign-in.html") {
 	url_link = window.location.href.length;
 	link = window.location.href.slice(url_link-14, url_link+1);
 	if (link === "dashboard.html") {
+
 		// Start of find people section
-		var search = document.getElementById('srch-ppl');
-		var list = document.getElementById('ppl');
+
+		let search = document.getElementById('srch-ppl');
+		let list = document.getElementById('ppl');
 		search.addEventListener('keyup', searchItem);
 		search.addEventListener('focus', searchItem);
 		function searchItem(e) {
@@ -194,7 +196,27 @@ if (link==="sign-in.html") {
 				}
 			}
 		}
+
 		// End of find people section
+		
+		
+
+		// Start of ADD MEDIA section
+		
+		// Start of ADD ARICLES section
+		
+		function add_article() {
+			let box = document.getElementById("add-article");
+			box.classList.remove("recent-med");
+			box.firstElementChild.classList.add("hide");
+			box.classList.add("add-med");
+			document.getElementById("med-artcl-btn").classList.add("hide");
+			document.getElementById("add-med-artcl").classList.remove("hide");
+		}
+
+		// End of ADD ARTICLES section
+		
+		// End of ADD MEDIA section
 	}
 	// End of dashboard
 }

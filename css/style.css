@@ -21987,6 +21987,98 @@ textarea.form-control-lg {
   margin-left: 10px;
   font-family: "Open Sans", sans-serif;
 }
+#dashboard .tab-content #pills-add-med .container {
+  background-color: rgba(255, 255, 255, 0.95);
+  min-height: 600px;
+  margin: 20px 0;
+  padding: 30px;
+}
+#dashboard .tab-content #pills-add-med .container .med-section {
+  margin-bottom: 50px;
+}
+#dashboard .tab-content #pills-add-med .container .med-section h2, #dashboard .tab-content #pills-add-med .container .med-section .h2 {
+  color: #323436;
+  font-family: "Arvo", serif;
+  margin-bottom: 15px;
+}
+#dashboard .tab-content #pills-add-med .container .med-section .med-box {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  border: 2px solid #323436;
+}
+#dashboard .tab-content #pills-add-med .container .med-section .add-med {
+  padding: 10px;
+  height: 400px;
+}
+#dashboard .tab-content #pills-add-med .container .med-section .add-med #add-med-artcl form .form-floating {
+  margin-top: 10px;
+}
+#dashboard .tab-content #pills-add-med .container .med-section .add-med #add-med-artcl form .form-floating label {
+  color: #323436;
+}
+#dashboard .tab-content #pills-add-med .container .med-section .add-med #add-med-artcl form .form-floating textarea {
+  min-height: 200px;
+  overflow-y: auto;
+}
+#dashboard .tab-content #pills-add-med .container .med-section .add-med #add-med-artcl form .small-text {
+  width: 100%;
+  position: relative;
+  margin-top: 10px;
+}
+#dashboard .tab-content #pills-add-med .container .med-section .add-med #add-med-artcl form .small-text span {
+  color: #323436;
+  position: absolute;
+  right: 10px;
+  font-family: "Poppins", sans-serif;
+}
+#dashboard .tab-content #pills-add-med .container .med-section .add-med #add-med-artcl form .mb-3 {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+#dashboard .tab-content #pills-add-med .container .med-section .add-med #add-med-artcl form .mb-3 button {
+  margin: 0 10px;
+}
+#dashboard .tab-content #pills-add-med .container .med-section .recent-med {
+  border: 2px dashed #323436;
+}
+#dashboard .tab-content #pills-add-med .container .med-section .recent-med .rec-text {
+  color: #323436;
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.25em;
+}
+#dashboard .tab-content #pills-add-med .container .med-section .add-more-med {
+  margin-top: 10px;
+  width: 100%;
+  position: relative;
+}
+#dashboard .tab-content #pills-add-med .container .med-section .add-more-med button {
+  position: absolute;
+  right: 0;
+  border: none;
+  background-color: transparent;
+}
+#dashboard .tab-content #pills-add-med .container .med-section .add-more-med button:hover {
+  color: rgba(50, 52, 54, 0.9);
+  transition: color 300ms ease-in;
+}
+#dashboard .tab-content #pills-add-med .container .med-section .add-more-med button span {
+  margin-left: 10px;
+  font-size: 1.05em;
+  vertical-align: middle;
+}
+#dashboard .tab-content #pills-add-med .container .med-section .add-more-med button svg {
+  height: 14px;
+  width: 14px;
+}
+#dashboard .hide {
+  display: none;
+}
 
 @media (max-width: 992px) {
   .navbar-dark .navbar-collapse .navbar-nav {

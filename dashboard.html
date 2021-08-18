@@ -161,7 +161,68 @@
             </li>
           </ul>
         </div>
-        <div class="tab-pane fade" id="pills-add-med" role="tabpanel" aria-labelledby="pills-add-med-tab">...</div>
+        <div class="tab-pane fade" id="pills-add-med" role="tabpanel" aria-labelledby="pills-add-med-tab">
+          <div class="container">
+            <div id="add-articles" class="med-section">
+              <h2>Add Articles</h2>
+              <div class="recent-med med-box" id="add-article">
+                <span class="rec-text">No recent articles</span>
+                <div id="add-med-artcl" class="hide">
+                  <form>
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="floatingHeading" placeholder="Heading">
+                      <label for="floatingHeading">Heading</label>
+                    </div>
+                    <div class="form-floating">
+                      <textarea class="form-control" placeholder="Type your articles here..." id="floatingTextarea2"></textarea>
+                      <label for="floatingTextarea2">Article</label>
+                    </div>
+                    <div class="small-text">
+                      <span>Max limit is 500 words</span>
+                    </div>
+                    <div class="mb-3">
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                      <button class="btn btn-info">Cancel</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div  class="add-more-med">
+                <button onclick="add_article()" id="med-artcl-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                  <path d="M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z"/>
+                  </svg><span>Add an article</span>
+                </button>
+              </div>
+            </div>
+            <div id="add-books" class="med-section">
+              <h2>Add Book Reviews</h2>
+              <div class="recent-med med-box">
+                <span class="rec-text">No recent book reviews</span>
+              </div>
+              <div class="add-more-med">
+                <button>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                  <path d="M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z"/>
+                  </svg><span>Add a book review</span>
+                </button>
+              </div>
+            </div>
+            <div id="add-gallery" class="med-section">
+              <h2>Add Images</h2>
+              <div class="recent-med med-box">
+                <span class="rec-text">No recent images</span>
+              </div>
+              <div class="add-more-med">
+                <button>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                  <path d="M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z"/>
+                  </svg><span>Add an image</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="tab-pane fade" id="pills-settings" role="tabpanel" aria-labelledby="pills-settings-tab">...</div>
       </div>
     </div>
