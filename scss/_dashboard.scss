@@ -81,9 +81,9 @@
 						position: relative;
 						border: 2px solid $primary;
 					}
-					.add-med {
+					.add-med-1 {
 						padding: 10px;
-						height: 400px;
+						height: 450px;
 						#add-med-artcl {
 							form {
 								.form-floating {
@@ -96,23 +96,76 @@
 										overflow-y: auto;
 									}
 								}
-								.small-text {
-									width: 100%;
-									position: relative;
-									margin-top: 10px;
-									span {
-										color: $primary;
-										position: absolute;
-										right: 10px;
-										font-family: 'Poppins', sans-serif;
-									}
-								}
 								.mb-3 {
 									margin-top: 50px;
 									display: flex;
 									justify-content: center;
 									button {
 										margin: 0 10px;
+									}
+								}
+							}
+						}
+					}
+					.add-med-2 {
+						padding: 10px;
+						height: 510px;
+						#add-med-book {
+							form {
+								.form-floating {
+									margin-top: 10px;
+									label {
+										color: $primary;
+									}
+									textarea {
+										min-height: 100px;
+										overflow-y: auto;
+									}
+								}
+								.buttons {
+									margin-top: 10px;
+									display: flex;
+									justify-content: center;
+									button {
+										margin: 0 10px;
+									}
+								}
+								.file {
+									margin-top: 20px;
+									label {
+										color: $primary;
+									}
+								}
+							}
+						}
+					}
+					.add-med-3 {
+						padding: 10px;
+						height: 300px;
+						#add-med-img {
+							form {
+								.form-floating {
+									margin-top: 10px;
+									label {
+										color: $primary;
+									}
+									textarea {
+										min-height: 100px;
+										overflow-y: auto;
+									}
+								}
+								.buttons {
+									margin-top: 10px;
+									display: flex;
+									justify-content: center;
+									button {
+										margin: 0 10px;
+									}
+								}
+								.file {
+									margin-top: 20px;
+									label {
+										color: $primary;
 									}
 								}
 							}
@@ -160,6 +213,17 @@
 	}
 	.hide {
 		display: none;
+	}
+	.small-text {
+		width: 100%;
+		position: relative;
+		margin-top: 10px;
+		span {
+			color: $primary;
+			position: absolute;
+			right: 10px;
+			font-family: 'Poppins', sans-serif;
+		}
 	}
 }
 

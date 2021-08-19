@@ -65,7 +65,6 @@ if (link==="sign-in.html") {
 
 	function redirectSignIn(e) {
 		e.preventDefault();
-		console.log(is_validated);
 		if (is_validated) {
 			signIn = true;
 			let url = window.location.href.split("/sign-in.html")[0];
@@ -76,11 +75,9 @@ if (link==="sign-in.html") {
 
 	// Sign in page end
 } else{
-	console.log('In main page');
 	// Main Page Start
 	url_link = window.location.href.length;
 	link = window.location.href.slice(url_link-10, url_link+1);
-	console.log(link);
 	if (link === "index.html"|link === "y-website/") {
 		var signIn = false;
 	} else {
@@ -178,6 +175,30 @@ if (link==="sign-in.html") {
 	url_link = window.location.href.length;
 	link = window.location.href.slice(url_link-14, url_link+1);
 	if (link === "dashboard.html") {
+		var is_validated2;
+		// Validation of sign-in
+		// Example starter JavaScript for disabling form submissions if there are invalid fields
+		(function () {
+			'use strict'
+
+		  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+		  var forms = document.querySelectorAll('.needs-validation')
+
+		  // Loop over them and prevent submission
+		  Array.prototype.slice.call(forms)
+		  .forEach(function (form) {
+		  	form.addEventListener('submit', function (event) {
+		  		is_validated2 = form.checkValidity();
+		  		if (!is_validated2) {
+		  			event.preventDefault()
+		  			event.stopPropagation()
+		  		}
+
+		  		form.classList.add('was-validated')
+		  	}, false)
+		  })
+		})()
+
 
 		// Start of find people section
 
@@ -203,18 +224,194 @@ if (link==="sign-in.html") {
 
 		// Start of ADD MEDIA section
 		
+
+		
 		// Start of ADD ARICLES section
 		
+		// Brings the HTML set up for adding articles
 		function add_article() {
 			let box = document.getElementById("add-article");
 			box.classList.remove("recent-med");
 			box.firstElementChild.classList.add("hide");
-			box.classList.add("add-med");
+			box.classList.add("add-med-1");
 			document.getElementById("med-artcl-btn").classList.add("hide");
 			document.getElementById("add-med-artcl").classList.remove("hide");
 		}
 
+		// Goes back to recent section and cancels the articles
+		function cancel_article(e) {
+			e.preventDefault();
+			let yn = confirm("Are you sure you want to cancel? Your article won't be saved as draft.");
+			if (yn) {
+				let form = document.getElementById("form-article");
+				form.classList.remove("was-validated");
+				document.getElementById("artcl-heading").value="";
+				document.getElementById("artcl").value="";
+				let box = document.getElementById("add-article");
+				box.classList.add("recent-med");
+				box.firstElementChild.classList.remove("hide");
+				box.classList.remove("add-med-1");
+				document.getElementById("med-artcl-btn").classList.remove("hide");
+				document.getElementById("add-med-artcl").classList.add("hide");
+			}
+		}
+
+		// Submits the article
+		document.getElementById("form-article").addEventListener("submit", submit_article);
+		function submit_article(e) {
+			e.preventDefault();
+			if(is_validated2) {
+				let form = document.getElementById("form-article");
+				form.classList.remove("was-validated");
+				// Getting the input
+				let article_h = document.getElementById("artcl-heading").value;
+				let article = document.getElementById("artcl").value;
+				console.log(article_h);
+				console.log(article);
+
+				// Putting back to normal setup
+				document.getElementById("artcl-heading").value="";
+				document.getElementById("artcl").value="";
+				let box = document.getElementById("add-article");
+				box.classList.add("recent-med");
+				box.firstElementChild.classList.remove("hide");
+				box.classList.remove("add-med-1");
+				document.getElementById("med-artcl-btn").classList.remove("hide");
+				document.getElementById("add-med-artcl").classList.add("hide");
+
+			}
+
+		}
+
 		// End of ADD ARTICLES section
+		
+
+
+		// Start of ADD BOOK REVIEWS section
+		
+		// Brings the HTML for adding book review.
+		function add_book_review() {
+			let box = document.getElementById("add-book");
+			box.classList.remove("recent-med");
+			box.firstElementChild.classList.add("hide");
+			box.classList.add("add-med-2");
+			document.getElementById("med-book-btn").classList.add("hide");
+			document.getElementById("add-med-book").classList.remove("hide");
+		}
+
+		// Goes back to recent section and cancels the book review
+		function cancel_book_review(e) {
+			e.preventDefault();
+			let yn = confirm("Are you sure you want to cancel? Your book review won't be saved as draft.");
+			if (yn) {
+				let form = document.getElementById("form-book");
+				form.classList.remove("was-validated");
+				document.getElementById("book_name").value="";
+				document.getElementById("imageBook").value="";
+				document.getElementById("review").value="";
+				document.getElementById("bookShopUrl").value="";
+				let box = document.getElementById("add-book");
+				box.classList.add("recent-med");
+				box.firstElementChild.classList.remove("hide");
+				box.classList.remove("add-med-2");
+				document.getElementById("med-book-btn").classList.remove("hide");
+				document.getElementById("add-med-book").classList.add("hide");
+			}
+		}
+
+
+		// Submits the book review
+		document.getElementById("form-book").addEventListener("submit", submit_book_review);
+		function submit_book_review(e) {
+			e.preventDefault();
+			if(is_validated2) {
+				let form = document.getElementById("form-book");
+				form.classList.remove("was-validated");
+				// Getting the input
+				let name = document.getElementById("book_name").value;
+				let image = document.getElementById("imageBook").value;
+				let review = document.getElementById("review").value;
+				let url = document.getElementById("bookShopUrl").value;
+				console.log(name);
+				console.log(image);
+				console.log(review);
+				console.log(url);
+
+				// Putting back to normal setup
+				document.getElementById("book_name").value="";
+				document.getElementById("imageBook").value="";
+				document.getElementById("review").value="";
+				document.getElementById("bookShopUrl").value="";
+				let box = document.getElementById("add-book");
+				box.classList.add("recent-med");
+				box.firstElementChild.classList.remove("hide");
+				box.classList.remove("add-med-2");
+				document.getElementById("med-book-btn").classList.remove("hide");
+				document.getElementById("add-med-book").classList.add("hide");
+
+			}
+		}
+
+		// End of ADD BOOK REVIEWS section
+		
+
+		// Start of ADD IMAGE section
+		
+		// Brings the HTML for adding book review.
+		function add_image() {
+			let box = document.getElementById("add-image");
+			box.classList.remove("recent-med");
+			box.firstElementChild.classList.add("hide");
+			box.classList.add("add-med-3");
+			document.getElementById("med-img-btn").classList.add("hide");
+			document.getElementById("add-med-img").classList.remove("hide");
+		}
+
+		// Goes back to recent section and cancels the image.
+		function cancel_image(e) {
+			e.preventDefault();
+			let yn = confirm("Are you sure you want to cancel? Your image won't be saved as draft.");
+			if (yn) {
+				let form = document.getElementById("form-image");
+				form.classList.remove("was-validated");
+				document.getElementById("imageGallery").value="";
+				document.getElementById("imgCaption").value="";
+				let box = document.getElementById("add-image");
+				box.classList.add("recent-med");
+				box.firstElementChild.classList.remove("hide");
+				box.classList.remove("add-med-3");
+				document.getElementById("med-img-btn").classList.remove("hide");
+				document.getElementById("add-med-img").classList.add("hide");
+			}
+		}
+
+		// Submits the book review
+		document.getElementById("form-image").addEventListener("submit", submit_image);
+		function submit_image(e) {
+			e.preventDefault();
+			if(is_validated2) {
+				let form = document.getElementById("form-image");
+				form.classList.remove("was-validated");
+				// Getting the input
+				let image = document.getElementById("imageGallery").value;
+				let caption = document.getElementById("imgCaption").value;
+				console.log(image);
+				console.log(caption);
+
+				// Putting back to normal setup
+				document.getElementById("imageGallery").value="";
+				document.getElementById("imgCaption").value="";
+				let box = document.getElementById("add-image");
+				box.classList.add("recent-med");
+				box.firstElementChild.classList.remove("hide");
+				box.classList.remove("add-med-3");
+				document.getElementById("med-img-btn").classList.remove("hide");
+				document.getElementById("add-med-img").classList.add("hide");
+
+			}
+		}
+
+		// End of ADD IMAGE section
 		
 		// End of ADD MEDIA section
 	}

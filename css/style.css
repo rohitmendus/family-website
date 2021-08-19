@@ -22007,38 +22007,83 @@ textarea.form-control-lg {
   position: relative;
   border: 2px solid #323436;
 }
-#dashboard .tab-content #pills-add-med .container .med-section .add-med {
+#dashboard .tab-content #pills-add-med .container .med-section .add-med-1 {
   padding: 10px;
-  height: 400px;
+  height: 450px;
 }
-#dashboard .tab-content #pills-add-med .container .med-section .add-med #add-med-artcl form .form-floating {
+#dashboard .tab-content #pills-add-med .container .med-section .add-med-1 #add-med-artcl form .form-floating {
   margin-top: 10px;
 }
-#dashboard .tab-content #pills-add-med .container .med-section .add-med #add-med-artcl form .form-floating label {
+#dashboard .tab-content #pills-add-med .container .med-section .add-med-1 #add-med-artcl form .form-floating label {
   color: #323436;
 }
-#dashboard .tab-content #pills-add-med .container .med-section .add-med #add-med-artcl form .form-floating textarea {
+#dashboard .tab-content #pills-add-med .container .med-section .add-med-1 #add-med-artcl form .form-floating textarea {
   min-height: 200px;
   overflow-y: auto;
 }
-#dashboard .tab-content #pills-add-med .container .med-section .add-med #add-med-artcl form .small-text {
-  width: 100%;
-  position: relative;
-  margin-top: 10px;
-}
-#dashboard .tab-content #pills-add-med .container .med-section .add-med #add-med-artcl form .small-text span {
-  color: #323436;
-  position: absolute;
-  right: 10px;
-  font-family: "Poppins", sans-serif;
-}
-#dashboard .tab-content #pills-add-med .container .med-section .add-med #add-med-artcl form .mb-3 {
+#dashboard .tab-content #pills-add-med .container .med-section .add-med-1 #add-med-artcl form .mb-3 {
   margin-top: 50px;
   display: flex;
   justify-content: center;
 }
-#dashboard .tab-content #pills-add-med .container .med-section .add-med #add-med-artcl form .mb-3 button {
+#dashboard .tab-content #pills-add-med .container .med-section .add-med-1 #add-med-artcl form .mb-3 button {
   margin: 0 10px;
+}
+#dashboard .tab-content #pills-add-med .container .med-section .add-med-2 {
+  padding: 10px;
+  height: 510px;
+}
+#dashboard .tab-content #pills-add-med .container .med-section .add-med-2 #add-med-book form .form-floating {
+  margin-top: 10px;
+}
+#dashboard .tab-content #pills-add-med .container .med-section .add-med-2 #add-med-book form .form-floating label {
+  color: #323436;
+}
+#dashboard .tab-content #pills-add-med .container .med-section .add-med-2 #add-med-book form .form-floating textarea {
+  min-height: 100px;
+  overflow-y: auto;
+}
+#dashboard .tab-content #pills-add-med .container .med-section .add-med-2 #add-med-book form .buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+#dashboard .tab-content #pills-add-med .container .med-section .add-med-2 #add-med-book form .buttons button {
+  margin: 0 10px;
+}
+#dashboard .tab-content #pills-add-med .container .med-section .add-med-2 #add-med-book form .file {
+  margin-top: 20px;
+}
+#dashboard .tab-content #pills-add-med .container .med-section .add-med-2 #add-med-book form .file label {
+  color: #323436;
+}
+#dashboard .tab-content #pills-add-med .container .med-section .add-med-3 {
+  padding: 10px;
+  height: 300px;
+}
+#dashboard .tab-content #pills-add-med .container .med-section .add-med-3 #add-med-img form .form-floating {
+  margin-top: 10px;
+}
+#dashboard .tab-content #pills-add-med .container .med-section .add-med-3 #add-med-img form .form-floating label {
+  color: #323436;
+}
+#dashboard .tab-content #pills-add-med .container .med-section .add-med-3 #add-med-img form .form-floating textarea {
+  min-height: 100px;
+  overflow-y: auto;
+}
+#dashboard .tab-content #pills-add-med .container .med-section .add-med-3 #add-med-img form .buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+#dashboard .tab-content #pills-add-med .container .med-section .add-med-3 #add-med-img form .buttons button {
+  margin: 0 10px;
+}
+#dashboard .tab-content #pills-add-med .container .med-section .add-med-3 #add-med-img form .file {
+  margin-top: 20px;
+}
+#dashboard .tab-content #pills-add-med .container .med-section .add-med-3 #add-med-img form .file label {
+  color: #323436;
 }
 #dashboard .tab-content #pills-add-med .container .med-section .recent-med {
   border: 2px dashed #323436;
@@ -22078,6 +22123,17 @@ textarea.form-control-lg {
 }
 #dashboard .hide {
   display: none;
+}
+#dashboard .small-text {
+  width: 100%;
+  position: relative;
+  margin-top: 10px;
+}
+#dashboard .small-text span {
+  color: #323436;
+  position: absolute;
+  right: 10px;
+  font-family: "Poppins", sans-serif;
 }
 
 @media (max-width: 992px) {
