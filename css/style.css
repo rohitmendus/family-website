@@ -21950,6 +21950,14 @@ textarea.form-control-lg {
 }
 #dashboard .nav-pills .nav-link:hover {
   border-bottom: 3px solid white;
+  transition: border-bottom 300ms ease-out;
+}
+#dashboard .nav-pills .s-btn-icon {
+  display: none;
+}
+#dashboard .nav-pills .s-btn-icon svg {
+  height: 20px;
+  width: 20px;
 }
 #dashboard .nav-pills .active {
   border-bottom: 3px solid white;
@@ -22000,6 +22008,7 @@ textarea.form-control-lg {
   color: #323436;
   font-family: "Arvo", serif;
   margin-bottom: 15px;
+  font-size: 1.8em;
 }
 #dashboard .tab-content #pills-add-med .container .med-section .med-box {
   width: 100%;
@@ -22121,6 +22130,59 @@ textarea.form-control-lg {
   height: 14px;
   width: 14px;
 }
+#dashboard .tab-content #pills-settings .container {
+  background-color: rgba(255, 255, 255, 0.95);
+  min-height: 600px;
+  margin: 20px 0;
+  padding: 30px;
+}
+#dashboard .tab-content #pills-settings .container h2, #dashboard .tab-content #pills-settings .container .h2 {
+  color: #323436;
+  margin-bottom: 30px;
+}
+#dashboard .tab-content #pills-settings .container .row {
+  margin-bottom: 30px;
+}
+#dashboard .tab-content #pills-settings .container .row .col-md-5 {
+  display: flex;
+  justify-content: center;
+}
+#dashboard .tab-content #pills-settings .container .row .col-md-5 .img-box {
+  margin-top: 20px;
+  background-image: url(../images/sign-in-profile.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+#dashboard .tab-content #pills-settings .container .row .col-md-5 .img-box div {
+  position: absolute;
+  bottom: -12%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#dashboard .tab-content #pills-settings .container .row .col-md-7 form div label {
+  color: #323436;
+}
+#dashboard .tab-content #pills-settings .container .row .col-md-7 form .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#dashboard .tab-content #pills-settings .container .row .col-md-7 form .buttons button {
+  padding: 10px;
+}
+#dashboard .tab-content #pills-settings .container .row .col-md-7 form .buttons button svg {
+  margin-right: 2px;
+}
+#dashboard .tab-content #pills-settings .container .row .col-md-7 form .buttons button span {
+  vertical-align: middle;
+}
 #dashboard .hide {
   display: none;
 }
@@ -22225,6 +22287,29 @@ textarea.form-control-lg {
   }
   #footer .container .row .message form .form-floating button {
     width: auto;
+    font-size: 0.9em;
+  }
+
+  #dashboard .tab-content #pills-add-med .container .med-section h2 {
+    font-size: 1.6em;
+  }
+  #dashboard .tab-content #pills-add-med .container .med-section .med-box .med-form form div button {
+    font-size: 0.95em;
+  }
+  #dashboard .tab-content #pills-add-med .container .med-section .med-box .med-form form div .invalid-feedback, #dashboard .tab-content #pills-add-med .container .med-section .med-box .med-form form div .valid-feedback {
+    font-size: 0.8em;
+  }
+  #dashboard .tab-content #pills-add-med .container .med-section .recent-med .rec-text {
+    font-size: 1.05em;
+  }
+  #dashboard .tab-content #pills-add-med .container .med-section .add-more-med button svg {
+    height: 13px;
+    width: 13px;
+  }
+  #dashboard .tab-content #pills-add-med .container .med-section .add-more-med button span {
+    font-size: 1em;
+  }
+  #dashboard .small-text span {
     font-size: 0.9em;
   }
 }
@@ -22404,6 +22489,35 @@ textarea.form-control-lg {
     font-size: 1em;
     background-size: 20px;
   }
+  #dashboard .tab-content #pills-add-med .container .med-section h2 {
+    font-size: 1.4em;
+  }
+  #dashboard .tab-content #pills-add-med .container .med-section .med-box .med-form form div input, #dashboard .tab-content #pills-add-med .container .med-section .med-box .med-form form div textarea {
+    font-size: 0.95em;
+  }
+  #dashboard .tab-content #pills-add-med .container .med-section .med-box .med-form form div label {
+    font-size: 0.95em;
+  }
+  #dashboard .tab-content #pills-add-med .container .med-section .med-box .med-form form div button {
+    font-size: 0.9em;
+  }
+  #dashboard .tab-content #pills-add-med .container .med-section .med-box .med-form form div .invalid-feedback, #dashboard .tab-content #pills-add-med .container .med-section .med-box .med-form form div .valid-feedback {
+    font-size: 0.75em;
+  }
+  #dashboard .tab-content #pills-add-med .container .med-section .recent-med .rec-text {
+    font-size: 1em;
+    text-align: center;
+  }
+  #dashboard .tab-content #pills-add-med .container .med-section .add-more-med button svg {
+    height: 12px;
+    width: 12px;
+  }
+  #dashboard .tab-content #pills-add-med .container .med-section .add-more-med button span {
+    font-size: 0.95em;
+  }
+  #dashboard .small-text span {
+    font-size: 0.85em;
+  }
 }
 @media (max-width: 411px) {
   #sign-in-page .back {
@@ -22518,9 +22632,15 @@ textarea.form-control-lg {
   }
 
   #dashboard .nav-pills .nav-link {
-    margin: 8px 5px;
+    margin: 8px 7px;
     padding: 0 5px;
-    font-size: 1.1em;
+    font-size: 1.15em;
+  }
+  #dashboard .nav-pills .s-btn-icon {
+    display: block;
+  }
+  #dashboard .nav-pills .s-btn-text {
+    display: none;
   }
   #dashboard .tab-content #pills-ppl * {
     font-size: 3.9vw;
@@ -22528,6 +22648,34 @@ textarea.form-control-lg {
   #dashboard .tab-content #pills-ppl div #srch-ppl {
     font-size: 3.9vw;
     background-size: 18px;
+  }
+  #dashboard .tab-content #pills-add-med .container .med-section h2 {
+    font-size: 1.2em;
+  }
+  #dashboard .tab-content #pills-add-med .container .med-section .med-box .med-form form div input, #dashboard .tab-content #pills-add-med .container .med-section .med-box .med-form form div textarea {
+    font-size: 0.9em;
+  }
+  #dashboard .tab-content #pills-add-med .container .med-section .med-box .med-form form div label {
+    font-size: 0.9em;
+  }
+  #dashboard .tab-content #pills-add-med .container .med-section .med-box .med-form form div button {
+    font-size: 0.85em;
+  }
+  #dashboard .tab-content #pills-add-med .container .med-section .med-box .med-form form div .invalid-feedback, #dashboard .tab-content #pills-add-med .container .med-section .med-box .med-form form div .valid-feedback {
+    font-size: 0.7em;
+  }
+  #dashboard .tab-content #pills-add-med .container .med-section .recent-med .rec-text {
+    font-size: 0.9em;
+  }
+  #dashboard .tab-content #pills-add-med .container .med-section .add-more-med button svg {
+    height: 11px;
+    width: 11px;
+  }
+  #dashboard .tab-content #pills-add-med .container .med-section .add-more-med button span {
+    font-size: 0.9em;
+  }
+  #dashboard .small-text span {
+    font-size: 0.8em;
   }
 }
 body, p, span, pre {

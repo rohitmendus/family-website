@@ -132,6 +132,54 @@
 			}
 		}
 	}
+	#dashboard {
+		.tab-content {
+			#pills-add-med {
+				.container {
+					.med-section {
+						h2 {
+							font-size: 1.6em;
+						}
+						.med-box {
+							.med-form {
+								form {
+									div {
+										button {
+											font-size: 0.95em;
+										}
+										.invalid-feedback, .valid-feedback {
+											font-size: 0.8em;
+										}
+									}
+								}
+							}
+						}
+						.recent-med {
+							.rec-text {
+								font-size: 1.05em;
+							}
+						}
+						.add-more-med {
+							button {
+								svg {
+									height: 13px;
+									width: 13px;
+								}
+								span {
+									font-size: 1em;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.small-text {
+			span {
+				font-size: 0.9em;
+			}
+		}
+	}
 }
 
 
@@ -371,6 +419,57 @@
 					}
 				}
 			}
+			#pills-add-med {
+				.container {
+					.med-section {
+						h2 {
+							font-size: 1.4em;
+						}
+						.med-box {
+							.med-form {
+								form {
+									div {
+										input, textarea {
+											font-size: 0.95em;
+										}
+										label {
+											font-size: 0.95em;
+										}
+										button {
+											font-size: 0.9em;
+										}
+										.invalid-feedback, .valid-feedback {
+											font-size: 0.75em;
+										}
+									}
+								}
+							}
+						}
+						.recent-med {
+							.rec-text {
+								font-size: 1em;
+								text-align: center;
+							}
+						}
+						.add-more-med {
+							button {
+								svg {
+									height: 12px;
+									width: 12px;
+								}
+								span {
+									font-size: 0.95em;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.small-text {
+			span {
+				font-size: 0.85em;
+			}
 		}
 	}
 }
@@ -534,9 +633,15 @@
 	#dashboard {
 		.nav-pills {
 			.nav-link {
-				margin: 8px 5px;
+				margin: 8px 7px;
 				padding: 0 5px;
-				font-size: 1.1em
+				font-size: 1.15em
+			}
+			.s-btn-icon {
+				display: block;
+			}
+			.s-btn-text {
+				display: none;
 			}
 		}
 		.tab-content {
@@ -550,6 +655,56 @@
 						background-size: 18px;
 					}
 				}
+			}
+			#pills-add-med {
+				.container {
+					.med-section {
+						h2 {
+							font-size: 1.2em;
+						}
+						.med-box {
+							.med-form {
+								form {
+									div {
+										input, textarea {
+											font-size: 0.9em;
+										}
+										label {
+											font-size: 0.9em;
+										}
+										button {
+											font-size: 0.85em;
+										}
+										.invalid-feedback, .valid-feedback {
+											font-size: 0.7em;
+										}
+									}
+								}
+							}
+						}
+						.recent-med {
+							.rec-text {
+								font-size: 0.9em;
+							}
+						}
+						.add-more-med {
+							button {
+								svg {
+									height: 11px;
+									width: 11px;
+								}
+								span {
+									font-size: 0.9em;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.small-text {
+			span {
+				font-size: 0.8em;
 			}
 		}
 	}

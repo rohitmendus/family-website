@@ -20,6 +20,14 @@
 			background-color: transparent;
 			&:hover {
 				border-bottom: 3px solid white;
+				transition: border-bottom 300ms ease-out;
+			}
+		}
+		.s-btn-icon {
+			display: none;
+			svg {
+				height: 20px;
+				width: 20px;
 			}
 		}
 		.active {
@@ -74,6 +82,7 @@
 						color: $primary;
 						font-family: 'Arvo', serif;
 						margin-bottom: 15px;
+						font-size: 1.8em;
 					}
 					.med-box {
 						width: 100%;
@@ -204,6 +213,67 @@
 							svg {
 								height: 14px;
 								width: 14px;
+							}
+						}
+					}
+				}
+			}
+		}
+		#pills-settings {
+			.container {
+				background-color: rgba(255, 255, 255, 0.95);
+				min-height: 600px;
+				margin: 20px 0;
+				padding: 30px;
+				h2 {
+					color: $primary;
+					margin-bottom: 30px;
+				}
+				.row {
+					margin-bottom: 30px;
+					.col-md-5 {
+						display: flex;
+						justify-content: center;
+						.img-box {
+							margin-top: 20px;
+							background-image: url(../images/sign-in-profile.jpg);
+							background-position: center;
+							background-repeat: no-repeat;
+							background-size: cover;
+							position: relative;	
+							width: 250px;
+							height: 250px;
+							border-radius: 50%;
+							div {
+								position: absolute;
+								bottom: -12%;
+								left: 50%;
+								transform: translate(-50%, -50%);
+								text-align: center;
+								background-color: rgba(0, 0, 0, 0.5);
+							}
+						}
+					}
+					.col-md-7 {
+						form {
+							div {
+								label {
+									color: $primary;
+								}
+							}
+							.buttons {
+								display: flex;
+								justify-content: center;
+								align-items: center;
+								button {
+									padding: 10px;
+									svg {
+										margin-right: 2px;
+									}
+									span {
+										vertical-align: middle;
+									}
+								}
 							}
 						}
 					}
