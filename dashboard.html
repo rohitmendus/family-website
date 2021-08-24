@@ -315,81 +315,141 @@
             <div>
               <h2>Profile Info</h2>
               <div class="row">
-                <div class="col-md-7">
-                  <form class="row needs-validation" novalidate>
+                <div class="col-md-7 col-12 order-2 order-md-1">
+                  <form id="profile-info-form" class="row needs-validation" novalidate>
                     <div class="mb-3 col-md-6 col-12">
                       <label for="s-first-name" class="form-label">First Name</label>
-                      <input type="text" class="form-control" id="s-first-name">
+                      <input type="text" class="form-control" id="s-first-name" value="Rohit" required disabled>
+                      <div class="invalid-feedback">
+                        This field is required
+                      </div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
                     </div>
                     <div class="mb-3 col-md-6 col-12">
-                      <label for="s-flast-name" class="form-label">Last Name</label>
-                      <input type="text" class="form-control" id="s-first-name">
+                      <label for="s-last-name" class="form-label">Last Name</label>
+                      <input type="text" class="form-control" id="s-last-name" value="Mendus" required disabled>
+                      <div class="invalid-feedback">
+                        This field is required
+                      </div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
                     </div>
                     <div class="mb-3 col-12">
                       <label for="s-email" class="form-label">Email address</label>
-                      <input type="email" class="form-control" id="s-email">
+                      <input type="email" class="form-control" id="s-email" value="rohitmendus@gmail.com" required disabled>
+                      <div class="invalid-feedback">
+                        This field is required
+                      </div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
                     </div>
-                    <div class="mb-3 col-12">
+                    <div class="mb-3 col-12 s-div-pwd">
                       <label for="s-pwd" class="form-label">Password</label>
-                      <input type="password" class="form-control" id="s-pwd">
+                      <input type="password" class="form-control" id="s-pwd" value="hello123" required disabled>
+                      <div class="pwd-visibility">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16" id="pwd-visibility-show">
+                          <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                          <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash-fill d-none" viewBox="0 0 16 16" id="pwd-visibility-hide">
+                          <path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588zM5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z"/>
+                          <path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12-.708.708z"/>
+                        </svg>
+                      </div>
+                      <div class="invalid-feedback">
+                        This field is required
+                      </div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
                     </div>
                     <div class="mb-3 col-12">
                       <label for="s-bio" class="form-label">Bio</label>
-                      <textarea class="form-control" id="s-bio" rows="3" placeholder="Tell us a little about yourself"></textarea>
+                      <textarea class="form-control" id="s-bio" rows="3" placeholder="Tell us a little about yourself" disabled></textarea>
                     </div>
                     <div class="buttons col-12">
-                      <button class="btn btn-primary">
+                      <button class="btn btn-primary" id="edit-info-btn" onclick="edit_profile_info(event)">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
                           <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
                         </svg>
                         <span>Edit</span>
                       </button>
-                      <button type="submit" class="btn btn-primary d-none">Save Changes</button>
-                      <button class="btn btn-primary d-none">Cancel</button>
+                      <button type="submit" class="btn btn-info d-none" id="save-info-btn">Save Changes</button>
+                      <button class="btn btn-danger d-none" id="cancel-info-btn" onclick="cancel_profile_info(event)">Cancel</button>
                     </div>
                   </form>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-5 col-12 order-1 order-md-2">
                   <div class="img-box">
-                    <div>
-                      <span>Change Profile Pic</span>
+                    <label class="-label" for="profile-pic">
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-fill" viewBox="0 0 16 16">
                         <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
                         <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z"/>
                       </svg>
-                    </div>
+                      <span>Change Image</span>
+                    </label>
+                    <input id="profile-pic" type="file" onchange="s_change_img(event)" accept="image/*"/>
+                    <img src="images/sign-in-profile.jpg" id="profile-pic-img"/>
                   </div>
                 </div>
               </div>
               <h2>Social Media Links</h2>
               <div class="row">
-                <div class="col-md-7">
-                  <form class="row needs-validation" novalidate>
+                <div class="col-md-7 col-12">
+                  <form id="urls-form" class="row needs-validation" novalidate>
                     <div class="mb-3 col-12">
                       <label for="s-twitter" class="form-label">Twitter</label>
-                      <input type="text" class="form-control" id="s-twitter">
+                      <input type="url" class="form-control" id="s-twitter" disabled>
+                      <div class="invalid-feedback">
+                        This field should be a URL!
+                      </div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
                     </div>
                     <div class="mb-3 col-12">
                       <label for="s-fb" class="form-label">Facebook</label>
-                      <input type="text" class="form-control" id="s-fb">
+                      <input type="url" class="form-control" id="s-fb" disabled>
+                      <div class="invalid-feedback">
+                        This field should be a URL!
+                      </div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
                     </div>
                     <div class="mb-3 col-12">
                       <label for="s-insta" class="form-label">Instagram</label>
-                      <input type="text" class="form-control" id="s-insta">
+                      <input type="url" class="form-control" id="s-insta" disabled>
+                      <div class="invalid-feedback">
+                        This field should be a URL!
+                      </div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
                     </div>
                     <div class="mb-3 col-12">
                       <label for="s-linkedin" class="form-label">LinkedIn</label>
-                      <input type="text" class="form-control" id="s-linkedin">
+                      <input type="url" class="form-control" id="s-linkedin" disabled>
+                      <div class="invalid-feedback">
+                        This field should be a URL!
+                      </div>
+                      <div class="valid-feedback">
+                        Looks good!
+                      </div>
                     </div>
                     <div class="buttons col-12">
-                      <button class="btn btn-primary">
+                      <button id="edit-urls-btn" class="btn btn-primary" onclick="edit_urls(event)">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
                           <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
                         </svg>
                         <span>Edit</span>
                       </button>
-                      <button type="submit" class="btn btn-primary d-none">Save Changes</button>
-                      <button class="btn btn-primary d-none">Cancel</button>
+                      <button type="submit" id="save-urls-btn" class="btn btn-info d-none">Save Changes</button>
+                      <button class="btn btn-danger d-none" id="cancel-urls-btn" onclick="cancel_urls(event)">Cancel</button>
                     </div>
                   </form>
                 </div>

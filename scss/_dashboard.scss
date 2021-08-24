@@ -232,25 +232,52 @@
 				.row {
 					margin-bottom: 30px;
 					.col-md-5 {
-						display: flex;
-						justify-content: center;
 						.img-box {
-							margin-top: 20px;
-							background-image: url(../images/sign-in-profile.jpg);
-							background-position: center;
-							background-repeat: no-repeat;
-							background-size: cover;
-							position: relative;	
-							width: 250px;
-							height: 250px;
-							border-radius: 50%;
-							div {
+							color: transparent;
+							transition: all .3s ease;
+							display: flex;
+							justify-content: center;
+							position: relative;
+							transition: all .3s ease;
+							input {
+								display: none;
+							}
+							img {
 								position: absolute;
-								bottom: -12%;
-								left: 50%;
-								transform: translate(-50%, -50%);
-								text-align: center;
-								background-color: rgba(0, 0, 0, 0.5);
+							    object-fit: cover;
+							    width: 250px;
+							    height: 250px;
+							    border-radius: 50%;
+							    z-index: 0;
+							}
+							label {
+								cursor: pointer;	
+								width: 250px;
+							    height: 250px;
+							    span, svg {
+								    display: inline-flex;
+								    padding: .2em;
+								}
+								svg {
+									width: 26px; 
+									height: 26px;
+								}
+								span {
+									height: 2em;
+								}
+							}
+							&:hover {
+							    label {
+							    	display: flex;
+							    	justify-content: center;
+							    	align-items: center;
+							    	background-color: rgba(0,0,0,.8);
+							    	z-index: 100;
+							    	color: white;
+							    	transition: background-color .2s ease-in-out;
+							    	border-radius: 50%;
+							    	margin-bottom: 0;
+							    }
 							}
 						}
 					}
@@ -266,12 +293,27 @@
 								justify-content: center;
 								align-items: center;
 								button {
-									padding: 10px;
+									margin-left: 10px;
+									margin-right: 10px;
 									svg {
 										margin-right: 2px;
 									}
 									span {
 										vertical-align: middle;
+									}
+								}
+							}
+							.s-div-pwd {
+								position: relative;
+								.pwd-visibility {
+									position: absolute;
+									color: $primary;
+									right: 25px;
+									bottom: 8px;
+									svg {
+										height: 20px;
+										width: 20px;
+										cursor: pointer;
 									}
 								}
 							}

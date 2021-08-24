@@ -414,6 +414,160 @@ if (link==="sign-in.html") {
 		// End of ADD IMAGE section
 		
 		// End of ADD MEDIA section
+		
+
+
+		// Start of SETTINGS section
+		
+		document.getElementById("pwd-visibility-show").addEventListener("click", s_show_pwd);
+		document.getElementById("pwd-visibility-hide").addEventListener("click", s_hide_pwd);
+
+
+		// Changes image 
+		function s_change_img(e) {
+			let filePath = URL.createObjectURL(event.target.files[0]); 
+			document.getElementById("profile-pic-img").src = filePath;
+		}
+
+
+		// Shows password
+		function s_show_pwd(e) {
+			document.getElementById("pwd-visibility-show").classList.add("d-none");
+			document.getElementById("s-pwd").type = "text";
+			document.getElementById("pwd-visibility-hide").classList.remove("d-none");
+		}
+
+		// Hides password
+		function s_hide_pwd(e) {
+			document.getElementById("pwd-visibility-hide").classList.add("d-none");
+			document.getElementById("s-pwd").type = "password";
+			document.getElementById("pwd-visibility-show").classList.remove("d-none");
+		}
+
+		var s_info_values = [];
+		// Changes to editing mode for profile info
+		function edit_profile_info(e) {
+			e.preventDefault();
+			document.getElementById("edit-info-btn").classList.add("d-none");
+			document.getElementById("save-info-btn").classList.remove("d-none");
+			document.getElementById("cancel-info-btn").classList.remove("d-none");
+			document.getElementsByClassName("pwd-visibility")[0].classList.add("d-none");
+
+			let elem = document.querySelectorAll("#profile-info-form > .mb-3 > input, #profile-info-form > .mb-3 > textarea");
+			for (let i of elem) {
+				s_info_values.push(i.value);
+				i.disabled = false;
+			}
+
+			document.getElementById("profile-info-form").addEventListener("submit", save_profile_info);
+		}
+
+		// Cancels the edit on profile info
+		function cancel_profile_info(e) {
+			e.preventDefault();
+			let yn = confirm("Are you sure you want to cancel? Your edits won't be saved!");
+			if (yn) {
+				document.getElementById("edit-info-btn").classList.remove("d-none");
+				document.getElementById("save-info-btn").classList.add("d-none");
+				document.getElementById("cancel-info-btn").classList.add("d-none");
+				document.getElementsByClassName("pwd-visibility")[0].classList.remove("d-none");
+				document.getElementById("profile-info-form").classList.remove("was-validated");
+
+				let elem = document.querySelectorAll("#profile-info-form > .mb-3 > input, #profile-info-form > .mb-3 > textarea");
+				let c = 0
+				for (let i of elem) {
+					i.value = s_info_values[c];
+					i.disabled = true;
+					c++;
+				}
+				s_info_values = [];
+				document.getElementById("profile-info-form").removeEventListener("submit", save_profile_info);
+			}
+		}
+
+	
+		// Saves profile info changes 
+		function save_profile_info(e) {
+			e.preventDefault();
+			if (is_validated2) {
+				document.getElementById("edit-info-btn").classList.remove("d-none");
+				document.getElementById("save-info-btn").classList.add("d-none");
+				document.getElementById("cancel-info-btn").classList.add("d-none");
+				document.getElementsByClassName("pwd-visibility")[0].classList.remove("d-none");
+				document.getElementById("profile-info-form").classList.remove("was-validated");
+
+				let elem = document.querySelectorAll("#profile-info-form > .mb-3 > input, #profile-info-form > .mb-3 > textarea");
+				for (let i of elem) {
+					i.disabled = true;
+				}
+
+				s_info_values = [];			
+				document.getElementById("profile-info-form").removeEventListener("submit", save_profile_info);
+			}
+		}
+
+
+
+		var s_url_values = [];
+		// Changes to editing mode for social media links
+		function edit_urls(e) {
+			e.preventDefault();
+			document.getElementById("edit-urls-btn").classList.add("d-none");
+			document.getElementById("save-urls-btn").classList.remove("d-none");
+			document.getElementById("cancel-urls-btn").classList.remove("d-none");
+
+			let elem = document.querySelectorAll("#urls-form > .mb-3 > input");
+			for (let i of elem) {
+				s_url_values.push(i.value);
+				i.disabled = false;
+			}
+
+			document.getElementById("urls-form").addEventListener("submit", save_urls);
+		}
+
+		// Cancels the edit on social media urls
+		function cancel_urls(e) {
+			e.preventDefault();
+			let yn = confirm("Are you sure you want to cancel? Your edits won't be saved!");
+			if (yn) {
+				document.getElementById("edit-urls-btn").classList.remove("d-none");
+				document.getElementById("save-urls-btn").classList.add("d-none");
+				document.getElementById("cancel-urls-btn").classList.add("d-none");
+				document.getElementById("urls-form").classList.remove("was-validated");
+
+				let elem = document.querySelectorAll("#urls-form > .mb-3 > input");
+				let c = 0;
+				for (let i of elem) {
+					i.value = s_url_values[c];
+					i.disabled = true;
+					c++;
+				}
+
+				s_url_values = [];
+				document.getElementById("urls-form").removeEventListener("submit", save_urls);
+			}
+		}
+
+		// Saves social media url changes 
+		function save_urls(e) {
+			e.preventDefault();
+			if (is_validated2) {
+				document.getElementById("edit-urls-btn").classList.remove("d-none");
+				document.getElementById("save-urls-btn").classList.add("d-none");
+				document.getElementById("cancel-urls-btn").classList.add("d-none");
+				document.getElementById("urls-form").classList.remove("was-validated");
+
+				let elem = document.querySelectorAll("#urls-form > .mb-3 > input");
+				for (let i of elem) {
+					i.disabled = true;
+				}
+
+				s_url_values = [];			
+				document.getElementById("urls-form").removeEventListener("submit", save_urls);
+			}
+		}	
+
+		// End of SETTINGS section
 	}
 	// End of dashboard
 }
