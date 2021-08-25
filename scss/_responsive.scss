@@ -1,4 +1,4 @@
-@use "_variables_mixins";
+@import "variables_mixins.scss";
 
 // Large devices 
 @media (max-width: 1200px) {
@@ -167,6 +167,71 @@
 								}
 								span {
 									font-size: 1em;
+								}
+							}
+						}
+					}
+				}
+			}
+			#pills-settings {
+				.container {
+					h2 {
+						font-size: 1.8em;
+					}
+					.row {
+						.col-md-5 {
+							.img-box {
+								height: 250px;
+								width: 200px;
+								margin-left: 20px;
+								img{
+									width: 100%;
+									height: 200px;
+								}
+								label {
+									height: 2em;
+									color: $primary;
+									position: absolute;
+									bottom: 0;
+									z-index: 100;
+									left: 15%;
+									span {
+										font-size: 0.95em;
+									}
+									svg {
+										width: 24px;
+										height: 24px;
+									}
+								}
+								&:hover {
+									label {
+										border-radius: 0;
+										background: unset;
+										display: inline-block;
+										color: $primary;
+									}
+								}
+							}
+						}
+						.col-md-7 {
+							form {
+								div {
+									.invalid-feedback, .valid-feedback {
+										font-size: 0.8em;
+									}
+								}
+								.buttons {
+									button {
+										font-size: 0.95em;
+									}
+								}
+								.s-div-pwd {
+									.pwd-visibility {
+										svg {
+											height: 18px;
+											width: 18px;
+										}
+									}
 								}
 							}
 						}
@@ -465,6 +530,51 @@
 					}
 				}
 			}
+			#pills-settings {
+				.container {
+					h2 {
+						font-size: 1.6em;
+						text-align: center;
+					}
+					.row {
+						.col-md-5 {
+							.img-box {
+								margin: 0 auto 30px;
+								display: flex;
+								label {
+									span {
+										font-size: 0.9em;
+									}
+									svg {
+										width: 22px;
+										height: 22px;
+									}
+								}
+							}
+						}
+						.col-md-7 {
+							form {
+								div {
+									input, textarea {
+										font-size: 0.95em;
+									}
+									label {
+										font-size: 0.95em;
+									}
+									.invalid-feedback, .valid-feedback {
+										font-size: 0.75em;
+									}
+								}
+								.buttons {
+									button {
+										font-size: 0.9em;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 		.small-text {
 			span {
@@ -695,6 +805,53 @@
 								}
 								span {
 									font-size: 0.9em;
+								}
+							}
+						}
+					}
+				}
+			}
+			#pills-settings {
+				.container {
+					h2 {
+						font-size: 1.4em;
+					}
+					.row {
+						.col-md-5 {
+							.img-box {
+								height: 225px;
+								width: 175px;
+								img{
+									width: 100%;
+									height: 175px;
+								}
+							}
+						}
+						.col-md-7 {
+							form {
+								div {
+									input, textarea {
+										font-size: 0.9em;
+									}
+									label {
+										font-size: 0.9em;
+									}
+									.invalid-feedback, .valid-feedback {
+										font-size: 0.7em;
+									}
+								}
+								.buttons {
+									button {
+										font-size: 0.85em;
+									}
+								}
+								.s-div-pwd {
+									.pwd-visibility {
+										svg {
+											height: 16px;
+											width: 16px;
+										}
+									}
 								}
 							}
 						}
