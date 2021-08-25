@@ -105,7 +105,7 @@ if (link==="sign-in.html") {
 
 	function sign_out() {
 		signIn = !(signIn);
-		check_login();
+		window.location.href = "index.html";
 	}
 
 	check_login();
@@ -159,15 +159,6 @@ if (link==="sign-in.html") {
 	}
 
 
-
-	// Open register tab
-	function open_reg_tab() {
-		let tab = "reg";
-		localStorage.setItem('tab_type', tab);
-		window.location.href = "sign-in.html";
-	}
-
-
 	// Main Page End
 	
 
@@ -175,6 +166,18 @@ if (link==="sign-in.html") {
 	url_link = window.location.href.length;
 	link = window.location.href.slice(url_link-14, url_link+1);
 	if (link === "dashboard.html") {
+
+
+		var tab2 = localStorage['dash_tab_type'];
+		localStorage.removeItem("dash_tab_type");
+		if (tab2 === "settings") {
+			var trigger_settings = document.querySelector('#pills-settings-tab');
+			var settings_tab = new bootstrap.Tab(trigger_settings);
+			settings_tab.show();
+		}
+
+
+
 		var is_validated2;
 		// Validation of sign-in
 		// Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -565,9 +568,23 @@ if (link==="sign-in.html") {
 				s_url_values = [];			
 				document.getElementById("urls-form").removeEventListener("submit", save_urls);
 			}
-		}	
+		} 
 
 		// End of SETTINGS section
 	}
 	// End of dashboard
+}
+
+// Open register tab
+function open_reg_tab() {
+	let tab = "reg";
+	localStorage.setItem('tab_type', tab);
+	window.location.href = "sign-in.html";
+}
+
+//Opens settigns tab
+function open_settings() {
+	let tab = "settings";
+	localStorage.setItem('dash_tab_type', tab);
+	window.location.href = "dashboard.html";
 }

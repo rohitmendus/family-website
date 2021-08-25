@@ -56,7 +56,7 @@
               </a>
               <ul class="dropdown-menu dropdown-menu-light dropdown-menu-md-end" aria-labelledby="navbarDropdownMenuLink">
                 <li><a class="dropdown-item" href="dashboard.html">Dashboard</a></li>
-                <li><a class="dropdown-item" href="dashboard.html">Settings</a></li>
+                <li><a class="dropdown-item" onclick="open_settings()">Settings</a></li>
                 <li><a class="dropdown-item" onclick = "sign_out()">Sign Out</a></li>
               </ul>
             </div>
@@ -76,10 +76,10 @@
             <div class="d-md-none d-inline">
               <hr style="color: white;">
               <li class="nav-item">
-                <a class="nav-link" href="#">Dashboard</a>
+                <a class="nav-link" href="dashboard.html">Dashboard</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Settings</a>
+                <a class="nav-link" onclick="open_settings()">Settings</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" onclick = "sign_out()">Sign Out</a>
